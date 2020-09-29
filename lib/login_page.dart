@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
+        backgroundColor: Colors.green,
         body: MyStatefulWidget(),
       ),
     );
@@ -30,6 +30,7 @@ class MyStatefulWidget extends StatefulWidget {
 //class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 class LoginRoute extends State<MyStatefulWidget> {
   final _formKey = GlobalKey<FormState>();
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   @override
   Widget build(BuildContext context) {
@@ -56,19 +57,29 @@ class LoginRoute extends State<MyStatefulWidget> {
                     ),
                   ),
                   TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: 'Username',
+                    style: style,
+                    decoration: InputDecoration(
+                      hintText: 'Email',
+                      contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
-                        return 'Please enter your username';
+                        return 'Please enter your email';
                       }
                       return null;
                     },
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical:5.0),
+                  ),
                   TextFormField(
-                    decoration: const InputDecoration(
+                    obscureText: true,
+                    style: style,
+                    decoration: InputDecoration(
                       hintText: 'Password',
+                      contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
@@ -77,51 +88,48 @@ class LoginRoute extends State<MyStatefulWidget> {
                       return null;
                     },
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10.0),
-                    child: Material(
-                      color: Colors.white30,
-                      child: InkWell(
-                        child: Text('Forgot username / password'),
-                        onTap: () {},
-                      ),
-                    ),
-                  ),
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: RaisedButton(
-                        textColor: Colors.white,
-                        color: Colors.blue,
-                        onPressed: () {
-                          // Validate will return true if the form is valid, or false if
-                          // the form is valid.
-                          if (_formKey.currentState.validate()) {
-                            // Process data.
-                            /*Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => SecondRoute()),
-                            );*/
-                          }
-                        },
-                        child: Text('Login'),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(30.0),
+                        color: Color(0xff01A0C7),
+                        child: MaterialButton(
+                          minWidth: MediaQuery.of(context).size.width,
+                          padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          onPressed: () {
+                            if (_formKey.currentState.validate()) {
+                              // Process data.
+                              /*Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => SecondRoute()),
+                                );*/
+                            }
+                          },
+                          child: Text("Login",
+                              textAlign: TextAlign.center,
+                              style: style.copyWith(
+                                  color: Colors.white, fontWeight: FontWeight.bold)),
+                        ),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 30.0),
-                    child: Center(
-                      child: Material(
-                        color: Colors.white30,
-                        child: InkWell(
-                          child: Text('Sign up'),
-                          onTap: () {
-                            /*Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => SecondRoute()),
-                            );*/
-                          },
-                        ),
+                    padding: const EdgeInsets.symmetric(vertical: 15.0),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(32.0),
+                      color: Color(0xff01A0C7),
+                      child: MaterialButton(
+                        minWidth: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                        onPressed: () {
+                        },
+                        child: Text("Reset password",
+                            textAlign: TextAlign.center,
+                            style: style.copyWith(
+                                color: Colors.white, fontSize: 12.0)),
                       ),
                     ),
                   ),
