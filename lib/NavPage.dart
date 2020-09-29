@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'Profile.dart';
 import 'landingPage.dart';
 import 'StockPage.dart';
+import 'main.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(NavPage());
 
 /// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
+class NavPage extends StatelessWidget {
   static const String _title = 'Flutter Code Sample';
 
   @override
@@ -30,7 +31,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List<Widget> _widgetOptions = <Widget>[
-    LandingPage(),
+    Text("Home Page Goes Here"),
     StockPage(),
     ProfileApp(),
   ];
@@ -47,7 +48,28 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       appBar: AppBar(
         title: const Text('Main Menu'),
       ),
-      body: Center(child: LandingPage()),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.play_circle_filled),
+            title: Text('Stock'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            title: Text('Profile'),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
     );
   }
 }
