@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'loginPage.dart';
 import "login_page.dart";
+import 'CreateAccountPage.dart';
 
 void main() => runApp(LandingPage());
 

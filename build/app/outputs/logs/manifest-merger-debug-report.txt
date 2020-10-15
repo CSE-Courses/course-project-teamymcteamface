@@ -1,12 +1,42 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-MERGED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
-MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+MERGED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+MERGED from [:google_sign_in] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:15:1-36:12
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/5d969933da33d4ffbe53111a63fb5c09/firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/743b6f839a068697a901b328e5973140/firebase-core-16.0.9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bb3e8a250e0167309714354297b42817/firebase-analytics-16.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3d9b6c5b664aff95c81abcdf8308d187/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/2471d26daacea265495f16fbce35bcc8/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/02abf69aa6758729a7f5b50272531bf5/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/10631bb3012ccad9c5c9285264903a3d/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/dc3a1540f1034ba2470febe4c9b2580f/jetified-play-services-measurement-sdk-16.5.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/92c5b3dfda038cdde2ab52050fe60237/jetified-play-services-measurement-base-16.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/527a3a4189f623c52c5fbf481b6ba42f/jetified-play-services-stats-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ad4e84632a5229c2de178e37cf6d42ee/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3ee363da75e20afc5c7236f1803c26ad/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/0986d0d74b8a2c7da8161f6370fc7744/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/28d99d5113324aa067757f8ca41a426f/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e1bbce6b0d79e8479b70e7bd729bb743/loader-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -20,28 +50,85 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/Ousman_Kab
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ef3e70141ce80265c385477b65c4f7e8/exifinterface-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/077300052aa327ee6fc9bbb0ce309b24/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3a7eb299570065a3866b140e1a95969b/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/db91a79a4103f9ebe8b943260a54d425/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bce9999f881bb3993a5b24e08740cbbf/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b80fad55c42c418cc210e235056767fb/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/9fff482c8c59299ca17b582be16149de/firebase-database-collection-16.0.1/AndroidManifest.xml:2:1-7:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:2:5-41
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:2:5-41
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:1-47:12
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:1:11-69
 application
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:8:5-46:19
-MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
-MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:8:5-46:19
+MERGED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:28:5-34:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:28:5-34:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/5d969933da33d4ffbe53111a63fb5c09/firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/5d969933da33d4ffbe53111a63fb5c09/firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/743b6f839a068697a901b328e5973140/firebase-core-16.0.9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/743b6f839a068697a901b328e5973140/firebase-core-16.0.9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bb3e8a250e0167309714354297b42817/firebase-analytics-16.5.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bb3e8a250e0167309714354297b42817/firebase-analytics-16.5.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/02abf69aa6758729a7f5b50272531bf5/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/02abf69aa6758729a7f5b50272531bf5/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/10631bb3012ccad9c5c9285264903a3d/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/10631bb3012ccad9c5c9285264903a3d/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/dc3a1540f1034ba2470febe4c9b2580f/jetified-play-services-measurement-sdk-16.5.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/dc3a1540f1034ba2470febe4c9b2580f/jetified-play-services-measurement-sdk-16.5.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/92c5b3dfda038cdde2ab52050fe60237/jetified-play-services-measurement-base-16.5.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/92c5b3dfda038cdde2ab52050fe60237/jetified-play-services-measurement-base-16.5.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/527a3a4189f623c52c5fbf481b6ba42f/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/527a3a4189f623c52c5fbf481b6ba42f/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ad4e84632a5229c2de178e37cf6d42ee/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ad4e84632a5229c2de178e37cf6d42ee/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3ee363da75e20afc5c7236f1803c26ad/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3ee363da75e20afc5c7236f1803c26ad/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3a7eb299570065a3866b140e1a95969b/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -49,61 +136,121 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/Ousm
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:10:9-39
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:10:9-39
 	android:icon
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:11:9-43
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:9:9-57
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:9:9-57
 activity#com.example.StockMarketApp.MainActivity
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:12:9-40:20
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:12:9-40:20
 	android:launchMode
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:14:13-43
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:14:13-43
 	android:hardwareAccelerated
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:17:13-47
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:17:13-47
 	android:windowSoftInputMode
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:18:13-55
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:18:13-55
 	android:configChanges
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:16:13-163
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:16:13-163
 	android:theme
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:15:13-47
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:15:13-47
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:13:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:23:13-26:17
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:23:13-26:17
 	android:resource
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:25:15-52
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:25:15-52
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:24:15-70
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:24:15-70
 meta-data#io.flutter.embedding.android.SplashScreenDrawable
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:32:13-35:17
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:32:13-35:17
 	android:resource
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:34:15-61
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:34:15-61
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:33:15-79
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:33:15-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:36:13-39:29
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:36:13-39:29
 action#android.intent.action.MAIN
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:37:17-68
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:37:17-68
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:37:25-66
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:38:17-76
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:38:27-74
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:38:27-74
 meta-data#flutterEmbedding
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:43:9-45:33
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:43:9-45:33
 	android:value
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:45:13-30
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:45:13-30
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml:44:13-44
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml:44:13-44
 uses-sdk
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+MERGED from [:google_sign_in] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/5d969933da33d4ffbe53111a63fb5c09/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/5d969933da33d4ffbe53111a63fb5c09/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/743b6f839a068697a901b328e5973140/firebase-core-16.0.9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/743b6f839a068697a901b328e5973140/firebase-core-16.0.9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bb3e8a250e0167309714354297b42817/firebase-analytics-16.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bb3e8a250e0167309714354297b42817/firebase-analytics-16.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3d9b6c5b664aff95c81abcdf8308d187/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3d9b6c5b664aff95c81abcdf8308d187/jetified-play-services-auth-api-phone-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/2471d26daacea265495f16fbce35bcc8/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/2471d26daacea265495f16fbce35bcc8/jetified-play-services-auth-base-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/02abf69aa6758729a7f5b50272531bf5/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/02abf69aa6758729a7f5b50272531bf5/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/10631bb3012ccad9c5c9285264903a3d/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/10631bb3012ccad9c5c9285264903a3d/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/dc3a1540f1034ba2470febe4c9b2580f/jetified-play-services-measurement-sdk-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/dc3a1540f1034ba2470febe4c9b2580f/jetified-play-services-measurement-sdk-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/92c5b3dfda038cdde2ab52050fe60237/jetified-play-services-measurement-base-16.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/92c5b3dfda038cdde2ab52050fe60237/jetified-play-services-measurement-base-16.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/527a3a4189f623c52c5fbf481b6ba42f/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/527a3a4189f623c52c5fbf481b6ba42f/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ad4e84632a5229c2de178e37cf6d42ee/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ad4e84632a5229c2de178e37cf6d42ee/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3ee363da75e20afc5c7236f1803c26ad/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3ee363da75e20afc5c7236f1803c26ad/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/0986d0d74b8a2c7da8161f6370fc7744/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/0986d0d74b8a2c7da8161f6370fc7744/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/28d99d5113324aa067757f8ca41a426f/viewpager-1.0.0/AndroidManifest.xml:20:5-44
@@ -130,41 +277,325 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/Ousman_Kaba/.gradle/c
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/077300052aa327ee6fc9bbb0ce309b24/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3a7eb299570065a3866b140e1a95969b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/3a7eb299570065a3866b140e1a95969b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/db91a79a4103f9ebe8b943260a54d425/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/db91a79a4103f9ebe8b943260a54d425/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bce9999f881bb3993a5b24e08740cbbf/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/bce9999f881bb3993a5b24e08740cbbf/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b80fad55c42c418cc210e235056767fb/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b80fad55c42c418cc210e235056767fb/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/9fff482c8c59299ca17b582be16149de/firebase-database-collection-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/9fff482c8c59299ca17b582be16149de/firebase-database-collection-16.0.1/AndroidManifest.xml:5:5-44
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml:6:5-66
+ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml:6:5-66
+MERGED from [:google_sign_in] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/android/app/src/debug/AndroidManifest.xml:6:22-64
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
-	android:name
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
-	android:name
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
-provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
-	android:grantUriPermissions
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
-	android:authorities
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+		ADDED from /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/android/app/src/debug/AndroidManifest.xml:6:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
 	android:exported
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+		ADDED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_storage] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
 	android:resource
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
 	android:name
-		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/TheStockMarketApp/StockMarketApp/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+		ADDED from [:image_picker] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_database] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/Ousman_Kaba/Desktop/#24/course-project-teamymcteamface/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/337e24a263fdd84e41b4282b5c834462/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/b51970f23f70f72259e11e4d3b1cbdd5/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:25:22-76
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/122de08dffefef8420fc0c1de5058cef/jetified-firebase-database-17.0.0/AndroidManifest.xml:31:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:31:13-33:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:33:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c43ffd6f621656718d2dd37273e77b16/jetified-firebase-storage-17.0.0/AndroidManifest.xml:32:17-107
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/e942aa81e04b1a3f8bccbd382f0645b7/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:31:17-139
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:25-78
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.1.2] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/ee29c4418536768cf90cf36a4f2016ef/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/85d3168ea2cf1138867164f206fe262d/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/1cad50e824c2a91bda736a296b3e673e/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/40f4bfb5178747059f5abaf00c577b75/jetified-play-services-measurement-impl-16.5.0/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/c1ba88d6b880746e66203e9554f6ca11/jetified-play-services-measurement-sdk-api-16.5.0/AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/a4f04f274bd29c72ca4d9d560917d920/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:49:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/Ousman_Kaba/.gradle/caches/transforms-2/files-2.1/6aaa33f95ecc019229428fdd22e96f60/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
