@@ -139,6 +139,137 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 'Beginner trader hoping to improve on my skills. If you have any advice let me know.',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
+          FlatButton(
+            child: Text(
+              'Change password',
+              style: TextStyle(color: Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChangePasswordWidget()),
+              );
+            },
+            color: Colors.blue,
+            shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          ),
         ]);
+  }
+}
+
+class ChangePasswordWidget extends StatefulWidget {
+  ChangePasswordWidget({Key key}) : super(key: key);
+
+  @override
+  ChangePassword createState() => ChangePassword();
+}
+
+class ChangePassword extends State<ChangePasswordWidget> {
+  final pwChangeFormKey = GlobalKey<FormState>();
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0, color: Colors.black);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Form(
+            key: pwChangeFormKey,
+            child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
+                    child: TextFormField(
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter your current password';
+                        }
+                        return null;
+                      },
+                      obscureText: true,
+                      style: style,
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          hintText: "Current password",
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 0.0),
+                    child: TextFormField(
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter your new password';
+                        }
+                        return null;
+                      },
+                      obscureText: true,
+                      style: style,
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          hintText: "New password",
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 2.0),
+                    child: TextFormField(
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter your new password again';
+                        }
+                        return null;
+                      },
+                      obscureText: true,
+                      style: style,
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          hintText: "Confirm new password",
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(32.0),
+                      color: Color(0xff01A0C7),
+                      child: MaterialButton(
+                        onPressed: () {
+                          if (pwChangeFormKey.currentState.validate()) {
+                            // Process data.
+                          }
+                        },
+                        minWidth: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                        child: Text("Submit",
+                            textAlign: TextAlign.center,
+                            style: style.copyWith(color: Colors.white, fontSize: 12.0)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 0.0),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(32.0),
+                      color: Color(0xff01A0C7),
+                      child: MaterialButton(
+                        minWidth: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text("Cancel",
+                            textAlign: TextAlign.center,
+                            style: style.copyWith(color: Colors.white, fontSize: 12.0)),
+                      ),
+                    ),
+                  ),
+                ]
+            ),
+          )
+        )
+    );
   }
 }
