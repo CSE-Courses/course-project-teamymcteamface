@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import "login_page.dart";
+// import "login_page.dart";
 import 'CreateAccountPage.dart';
-// import 'google_login_page.dart';
+import 'google_login_page.dart';
 
 void main() => runApp(LandingPage());
 
@@ -45,7 +45,7 @@ class LandingPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return LoginPage();
+                            return GLoginPage();
                           },
                         ),
                       );
