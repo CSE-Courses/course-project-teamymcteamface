@@ -49,19 +49,17 @@ class LoginRoute extends State<MyStatefulWidget> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 32.0),
                       child: Image(
-                        height: 100,
-                        image: NetworkImage(
-                            'https://image.flaticon.com/icons/png/512/15/15464.png'),
-                        //fit: BoxFit.,
-                      ),
+                          image: AssetImage("assets/logo.png"), height: 135.0),
                     ),
                   ),
                   TextFormField(
                     style: style,
                     decoration: InputDecoration(
                       hintText: 'Email',
-                      contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+                      contentPadding:
+                          EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(32.0)),
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
@@ -71,15 +69,17 @@ class LoginRoute extends State<MyStatefulWidget> {
                     },
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical:5.0),
+                    padding: const EdgeInsets.symmetric(vertical: 5.0),
                   ),
                   TextFormField(
                     obscureText: true,
                     style: style,
                     decoration: InputDecoration(
                       hintText: 'Password',
-                      contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+                      contentPadding:
+                          EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(32.0)),
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
@@ -110,7 +110,8 @@ class LoginRoute extends State<MyStatefulWidget> {
                           child: Text("Login",
                               textAlign: TextAlign.center,
                               style: style.copyWith(
-                                  color: Colors.white, fontWeight: FontWeight.bold)),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold)),
                         ),
                       ),
                     ),
@@ -124,12 +125,10 @@ class LoginRoute extends State<MyStatefulWidget> {
                       child: MaterialButton(
                         minWidth: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-                        onPressed: () {
-                        },
+                        onPressed: () {},
                         child: Text("Reset password",
                             textAlign: TextAlign.center,
-                            style: style.copyWith(
-                                color: Colors.white, fontSize: 12.0)),
+                            style: style.copyWith(color: Colors.white)),
                       ),
                     ),
                   ),

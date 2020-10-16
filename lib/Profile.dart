@@ -1,5 +1,5 @@
 import 'dart:io';
-
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -17,6 +17,14 @@ class ProfileApp extends StatelessWidget {
     );
   }
 }
+
+// var kaba = "";
+// final FirebaseAuth _auth = FirebaseAuth.instance;
+// getCurrentUID() async {
+//   final FirebaseUser user = await _auth.currentUser();
+//   kaba = user.displayName;
+//   print(kaba);
+// }
 
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
@@ -127,7 +135,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                'John Doe',
+                // kaba,
+                "John Doe",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
           ListTile(

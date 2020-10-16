@@ -12,6 +12,7 @@ public final class R {
     public static final class attr {
         private attr() {}
 
+        public static final int alpha = 0x7f010000;
         public static final int buttonSize = 0x7f010001;
         public static final int circleCrop = 0x7f010002;
         public static final int colorScheme = 0x7f010003;
@@ -23,10 +24,12 @@ public final class R {
         public static final int fontProviderPackage = 0x7f010009;
         public static final int fontProviderQuery = 0x7f01000a;
         public static final int fontStyle = 0x7f01000b;
+        public static final int fontVariationSettings = 0x7f01000c;
         public static final int fontWeight = 0x7f01000d;
         public static final int imageAspectRatio = 0x7f01000e;
         public static final int imageAspectRatioAdjust = 0x7f01000f;
         public static final int scopeUris = 0x7f010010;
+        public static final int ttcIndex = 0x7f010011;
     }
     public static final class color {
         private color() {}
@@ -55,6 +58,8 @@ public final class R {
         public static final int compat_button_padding_horizontal_material = 0x7f030002;
         public static final int compat_button_padding_vertical_material = 0x7f030003;
         public static final int compat_control_corner_material = 0x7f030004;
+        public static final int compat_notification_large_icon_max_height = 0x7f030005;
+        public static final int compat_notification_large_icon_max_width = 0x7f030006;
         public static final int notification_action_icon_size = 0x7f030007;
         public static final int notification_action_text_size = 0x7f030008;
         public static final int notification_big_circle_margin = 0x7f030009;
@@ -140,6 +145,9 @@ public final class R {
         public static final int right_icon = 0x7f05003c;
         public static final int right_side = 0x7f05003d;
         public static final int standard = 0x7f05003e;
+        public static final int tag_transition_group = 0x7f050044;
+        public static final int tag_unhandled_key_event_manager = 0x7f050045;
+        public static final int tag_unhandled_key_listeners = 0x7f050046;
         public static final int text = 0x7f050047;
         public static final int text2 = 0x7f050048;
         public static final int time = 0x7f050049;
@@ -183,7 +191,7 @@ public final class R {
         public static final int common_open_on_phone = 0x7f09000f;
         public static final int common_signin_button_text = 0x7f090010;
         public static final int common_signin_button_text_long = 0x7f090011;
-        public static final int status_bar_notification_info_overflow = 0x7f090012;
+        public static final int status_bar_notification_info_overflow = 0x7f09001a;
     }
     public static final class style {
         private style() {}
@@ -199,6 +207,10 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
+        public static final int[] ColorStateListItem = { 0x10101a5, 0x101031f, 0x7f010000 };
+        public static final int ColorStateListItem_android_color = 0;
+        public static final int ColorStateListItem_android_alpha = 1;
+        public static final int ColorStateListItem_alpha = 2;
         public static final int[] FontFamily = { 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a };
         public static final int FontFamily_fontProviderAuthority = 0;
         public static final int FontFamily_fontProviderCerts = 1;
@@ -217,6 +229,22 @@ public final class R {
         public static final int FontFamilyFont_fontVariationSettings = 7;
         public static final int FontFamilyFont_fontWeight = 8;
         public static final int FontFamilyFont_ttcIndex = 9;
+        public static final int[] GradientColor = { 0x101019d, 0x101019e, 0x10101a1, 0x10101a2, 0x10101a3, 0x10101a4, 0x1010201, 0x101020b, 0x1010510, 0x1010511, 0x1010512, 0x1010513 };
+        public static final int GradientColor_android_startColor = 0;
+        public static final int GradientColor_android_endColor = 1;
+        public static final int GradientColor_android_type = 2;
+        public static final int GradientColor_android_centerX = 3;
+        public static final int GradientColor_android_centerY = 4;
+        public static final int GradientColor_android_gradientRadius = 5;
+        public static final int GradientColor_android_tileMode = 6;
+        public static final int GradientColor_android_centerColor = 7;
+        public static final int GradientColor_android_startX = 8;
+        public static final int GradientColor_android_startY = 9;
+        public static final int GradientColor_android_endX = 10;
+        public static final int GradientColor_android_endY = 11;
+        public static final int[] GradientColorItem = { 0x10101a5, 0x1010514 };
+        public static final int GradientColorItem_android_color = 0;
+        public static final int GradientColorItem_android_offset = 1;
         public static final int[] LoadingImageView = { 0x7f010002, 0x7f01000e, 0x7f01000f };
         public static final int LoadingImageView_circleCrop = 0;
         public static final int LoadingImageView_imageAspectRatio = 1;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "login_page.dart";
 import 'CreateAccountPage.dart';
+// import 'google_login_page.dart';
 
 void main() => runApp(LandingPage());
 
@@ -16,8 +17,9 @@ class LandingPage extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                Image(image: AssetImage("assets/logo.png"), height: 135.0),
                 Text(
-                  'The \n Stock \n Market\n Game',
+                  'The Stock \n Market Game',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     shadows: [
