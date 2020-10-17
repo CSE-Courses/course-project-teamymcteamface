@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-// import "login_page.dart";
 import 'CreateAccountPage.dart';
-import 'google_login_page.dart';
+import "login_page.dart";
 
 void main() => runApp(LandingPage());
 
@@ -17,9 +16,8 @@ class LandingPage extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                Image(image: AssetImage("assets/logo.png"), height: 135.0),
                 Text(
-                  'The Stock \n Market Game',
+                  'The \n Stock \n Market\n Game',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     shadows: [
@@ -45,7 +43,7 @@ class LandingPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return GLoginPage();
+                            return LoginPage();
                           },
                         ),
                       );
