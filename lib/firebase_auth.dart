@@ -69,7 +69,7 @@ void signOutGoogle() async {
   print("User Sign Out");
 }
 
-Future<String> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
+Future<void> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
   try {
     _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword);
   } catch(e) {
@@ -100,23 +100,24 @@ Future<String> signUpWithEmail(String formName, String formEmail, String formPas
     );
   }
   final FirebaseUser currentUser = await _auth.currentUser();
-  /*UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
+  UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
   userUpdateInfo.displayName = formName;
 
   currentUser.reload();
-  print(currentUser.displayName);*/
+  print(currentUser.displayName);
 
-  name = formName;
+  //name = formName;
+  name = currentUser.displayName;
   email = currentUser.email;
   currUID = currentUser.uid;
+  imageUrl = "";
 
   // create firebase db reference to access entries
   final ref = firebaseDB.reference().child("users");
 
   // check if user exists; if not create new entry in db
   ref.orderByChild("uid").equalTo(currentUser.uid);
-  DataSnapshot snapshot =
-  await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+  DataSnapshot snapshot = await ref.orderByChild("uid").equalTo(currentUser.uid).once();
   if (snapshot.value == null) {
     print("adding new user");
     ref.push().set({
@@ -127,13 +128,21 @@ Future<String> signUpWithEmail(String formName, String formEmail, String formPas
       "photo": imageUrl
     });
   }
-
 }
 
-Future<String> signInWithEmail(String email, String pw) async {
+Future<void> signInWithEmail(String formEmail, String formPassword) async {
+  _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword);
 
+  final FirebaseUser currentUser = await _auth.currentUser();
+  //name = formName;
+  email = currentUser.email;
+  currUID = currentUser.uid;
 }
 
 void signOutEmail() async {
 
+}
+
+Future<String> getEmail() async {
+  return email;
 }

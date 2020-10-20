@@ -1,7 +1,8 @@
 import 'dart:io';
-// import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'firebase_auth.dart';
 
 void main() => runApp(ProfileApp());
 
@@ -18,13 +19,13 @@ class ProfileApp extends StatelessWidget {
   }
 }
 
-// var kaba = "";
-// final FirebaseAuth _auth = FirebaseAuth.instance;
-// getCurrentUID() async {
-//   final FirebaseUser user = await _auth.currentUser();
-//   kaba = user.displayName;
-//   print(kaba);
-// }
+ var name = "";
+ final FirebaseAuth _auth = FirebaseAuth.instance;
+ getCurrentUID() async {
+   final FirebaseUser user = await _auth.currentUser();
+   name = user.email; // Will store email for now because of firebase problems.
+ }
+
 
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
@@ -57,6 +58,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
+    getCurrentUID();
     return Column(
         // AppBar(
         //     title: const Text('Instructor Profile Page'),
@@ -131,12 +133,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           ListTile(
               title: Text(
-                'Name',
+                'Email', // Will display email for now because of firebase propblems.
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                // kaba,
-                "John Doe",
+                 '$name', // Will display email for now because of firebase propblems.
+                //"John Doe",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
           ListTile(
