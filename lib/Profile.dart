@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'firebase_auth.dart';
+import 'google_login_page.dart';
 
 void main() => runApp(ProfileApp());
 
@@ -155,7 +156,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           FlatButton(
             onPressed: () {
               userSignOut();
-              Navigator.popUntil(context, ModalRoute.withName('/GLoginPage'));
+              //Navigator.popUntil(context, ModalRoute.withName('/GLoginPage'));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GLoginPage();
+                  },
+                ),
+              );
             },
             child: Text(
               'Sign out',
