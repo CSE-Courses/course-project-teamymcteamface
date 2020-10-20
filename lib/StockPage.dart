@@ -1,32 +1,73 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:stock_page/stock_list.dart';
 
-void main() => runApp(StockPage());
+import 'models/stock.dart';
 
-class StockPage extends StatelessWidget {
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(title: "Stocks", home: HomePage());
+  }
+}
+
+class HomePage extends StatelessWidget {
+
+  DateTime date = DateTime.parse(DateTime.now().toString());
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Stocks will go here',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-
-            // RaisedButton(
-            //   textColor: Colors.white,
-            //   color: Colors.redAccent,
-            //   child: Text('Back to Main Page'),
-            //   onPressed: () {
-
-            //   },
-            // )
-          ],
-        ),
-      )),
-    );
+        body: Stack(children: <Widget>[
+      Container(
+          padding: EdgeInsets.all(10),
+          width: MediaQuery.of(context).size.width,
+          color: Colors.green,
+          child: SafeArea(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                Text("Stocks",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold)),
+                Text(date.month.toString() + "/" + date.day.toString(),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold)),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
+                  child: SizedBox(
+                    height: 50,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintStyle: TextStyle(color: Colors.grey[500]),
+                          hintText: "Search",
+                          prefix: Icon(Icons.search),
+                          fillColor: Colors.white,
+                          filled: true,
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(width: 0, style: BorderStyle.none),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(16)))),
+                    ),
+                  ),
+                ),
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height - 270,
+                        child: StockList(stocks: Stock.getAll())
+                    )
+              ])))
+    ]));
   }
 }
