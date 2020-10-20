@@ -1,15 +1,15 @@
+import 'package:StockMarketApp/stock_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:stock_page/stock_list.dart';
 
 import 'models/stock.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(StockPage());
 }
 
-class MyApp extends StatelessWidget {
+class StockPage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
