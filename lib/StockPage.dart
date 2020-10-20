@@ -11,11 +11,40 @@ void main() {
 
 class StockPage extends StatelessWidget {
   // This widget is the root of your application.
-  @override
+   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Stocks", home: HomePage());
+    return MaterialApp(
+        theme: ThemeData(
+          brightness: Brightness.light,
+          primaryColor: Colors.black, //Changing this will change the color of the TabBar
+        ),
+        home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+    appBar: PreferredSize(
+    preferredSize: Size.fromHeight(50.0),
+        child: AppBar(
+        bottom: TabBar(
+        tabs: [
+              Tab(text: "Home"),
+              Tab(text: "Following"),
+            ],
+          ),
+        ),
+    ),
+        body: TabBarView(
+          children: [
+            new HomePage(),
+           Text("//TO DO"),
+          ],
+        ),
+      ),
+    ));
   }
-}
+ }
+//     return MaterialApp(title: "Stocks", home: HomePage());
+//   }
+// }
 
 class HomePage extends StatelessWidget {
 
