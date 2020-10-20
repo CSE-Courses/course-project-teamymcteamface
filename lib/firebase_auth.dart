@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -66,4 +67,73 @@ Future<String> signInWithGoogle() async {
 void signOutGoogle() async {
   await googleSignIn.signOut();
   print("User Sign Out");
+}
+
+Future<String> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
+  try {
+    _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword);
+  } catch(e) {
+    // Display alert if signup fails for some reason.
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Error"),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text(e.code),
+                Text(e.message),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Ok'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      }
+    );
+  }
+  final FirebaseUser currentUser = await _auth.currentUser();
+  /*UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
+  userUpdateInfo.displayName = formName;
+
+  currentUser.reload();
+  print(currentUser.displayName);*/
+
+  name = formName;
+  email = currentUser.email;
+  currUID = currentUser.uid;
+
+  // create firebase db reference to access entries
+  final ref = firebaseDB.reference().child("users");
+
+  // check if user exists; if not create new entry in db
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+  await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+  if (snapshot.value == null) {
+    print("adding new user");
+    ref.push().set({
+      // add to database
+      "name": name,
+      "uid": currUID,
+      "email": email,
+      "photo": imageUrl
+    });
+  }
+
+}
+
+Future<String> signInWithEmail(String email, String pw) async {
+
+}
+
+void signOutEmail() async {
+
 }
