@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'Profile.dart';
-import 'landingPage.dart';
 import 'StockPage.dart';
+import 'landingPage.dart';
+
 
 void main() => runApp(MyApp());
 
