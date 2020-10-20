@@ -19,7 +19,7 @@ class StockPage extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
 
-  DateTime date = DateTime.parse(DateTime.now().toString());
+  final date = DateTime.parse(DateTime.now().toString());
 
 
   @override
