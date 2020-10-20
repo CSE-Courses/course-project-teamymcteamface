@@ -8,6 +8,7 @@ String name;
 String email;
 String imageUrl;
 String currUID;
+String signInMethod;
 
 final firebaseDB = FirebaseDatabase.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -61,6 +62,7 @@ Future<String> signInWithGoogle() async {
     });
   }
 
+  signInMethod = "google";
   return 'signInWithGoogle succeeded: $user';
 }
 
@@ -132,7 +134,6 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
 
 Future<void> signInWithEmail(String formEmail, String formPassword) async {
   _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword);
-
   final FirebaseUser currentUser = await _auth.currentUser();
   //name = formName;
   email = currentUser.email;
@@ -140,9 +141,24 @@ Future<void> signInWithEmail(String formEmail, String formPassword) async {
 }
 
 void signOutEmail() async {
-
+  await _auth.signOut();
+  print('Email User Sign Out');
 }
 
-Future<String> getEmail() async {
+void userSignOut() async {
+  name = null;
+  currUID = null;
+  email = null;
+  imageUrl = null;
+
+  if(signInMethod == "google") {
+    signOutGoogle();
+    return;
+  }
+  signOutEmail();
+  return;
+}
+
+String getEmail() {
   return email;
 }

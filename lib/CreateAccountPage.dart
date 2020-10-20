@@ -91,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
               if(currUID != null) { // Temporary hacky way to check if auth is valid
                 Navigator.of(context).push(
                   MaterialPageRoute(
+                    settings: RouteSettings(name: "/NavPage"),
                     builder: (context) {
                       return NavPage();
                     },

@@ -44,6 +44,7 @@ class LandingPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
+                          settings: RouteSettings(name: "/GLoginPage"),
                           builder: (context) {
                             return GLoginPage();
                           },

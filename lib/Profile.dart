@@ -19,12 +19,12 @@ class ProfileApp extends StatelessWidget {
   }
 }
 
- var name = "";
+ /*var name = "";
  final FirebaseAuth _auth = FirebaseAuth.instance;
  getCurrentUID() async {
    final FirebaseUser user = await _auth.currentUser();
    name = user.email; // Will store email for now because of firebase problems.
- }
+ }*/
 
 
 class MyStatefulWidget extends StatefulWidget {
@@ -58,7 +58,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    getCurrentUID();
+    //getCurrentUID();
+    String name = getEmail();
+
     return Column(
         // AppBar(
         //     title: const Text('Instructor Profile Page'),
@@ -117,7 +119,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 'Trader',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
-          FlatButton.icon(
+          /*FlatButton.icon( // Temporarily commented out because of overflow
             onPressed: () {},
             icon: Icon(
               Icons.mail,
@@ -130,14 +132,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             color: Colors.blue,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          ),
+          ),*/
           ListTile(
               title: Text(
-                'Email', // Will display email for now because of firebase propblems.
+                'Email', // Will display email for now because of firebase problems.
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                 '$name', // Will display email for now because of firebase propblems.
+                 '$name', // Will display email for now because of firebase problems.
                 //"John Doe",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
@@ -150,6 +152,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 'Beginner trader hoping to improve on my skills. If you have any advice let me know.',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
+          FlatButton(
+            onPressed: () {
+              userSignOut();
+              Navigator.popUntil(context, ModalRoute.withName('/GLoginPage'));
+            },
+            child: Text(
+              'Sign out',
+              style: TextStyle(color: Colors.white),
+            ),
+            color: Colors.blue,
+            shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          ),
         ]);
   }
 }

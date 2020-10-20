@@ -59,6 +59,7 @@ class _LoginPageState extends State<GLoginPage> {
                 },
                 onSaved: (String value) {
                   formEmail = value.trim();
+                  print(formEmail);
                 },
               ),
               Padding(
@@ -101,6 +102,7 @@ class _LoginPageState extends State<GLoginPage> {
                             if(currUID != null) { // Temporary hacky way to check if auth is valid
                               Navigator.of(context).push(
                                 MaterialPageRoute(
+                                  settings: RouteSettings(name: "/NavPage"),
                                   builder: (context) {
                                     return NavPage();
                                   },
@@ -108,10 +110,6 @@ class _LoginPageState extends State<GLoginPage> {
                               );
                             }
                           });
-                          /*Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => SecondRoute()),
-                                );*/
                         }
                       },
                       child: Text("Login",
