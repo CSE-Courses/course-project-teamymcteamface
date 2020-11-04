@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:StockMarketApp/landingPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -20,13 +21,12 @@ class ProfileApp extends StatelessWidget {
   }
 }
 
- /*var name = "";
+/*var name = "";
  final FirebaseAuth _auth = FirebaseAuth.instance;
  getCurrentUID() async {
    final FirebaseUser user = await _auth.currentUser();
    name = user.email; // Will store email for now because of firebase problems.
  }*/
-
 
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
@@ -60,7 +60,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     //getCurrentUID();
-    String name = getEmail();
+    // String name = getEmail();
 
     return Column(
         // AppBar(
@@ -89,7 +89,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     radius: 100,
                     backgroundColor: Colors.blueGrey,
                     child: _profilePic == null
-                        ? Text('Tap To Add Profile Picture')
+                        ? CircleAvatar(
+                            backgroundImage: NetworkImage(
+                            imageUrl,
+                          ))
                         : CircleAvatar(
                             radius: 100,
                             backgroundImage: FileImage(_profilePic),
@@ -136,11 +139,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),*/
           ListTile(
               title: Text(
-                'Email', // Will display email for now because of firebase problems.
+                'Name', // Will display email for now because of firebase problems.
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                 '$name', // Will display email for now because of firebase problems.
+                name, // Will display email for now because of firebase problems.
                 //"John Doe",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
@@ -153,25 +156,27 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 'Beginner trader hoping to improve on my skills. If you have any advice let me know.',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
-          FlatButton(
+          RaisedButton(
             onPressed: () {
-              userSignOut();
-              //Navigator.popUntil(context, ModalRoute.withName('/GLoginPage'));
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return GLoginPage();
-                  },
-                ),
-              );
+              if (signInMethod == "google") {
+                signOutGoogle();
+              } else {
+                signOutEmail();
+              }
+              Navigator.of(context, rootNavigator: true).pushReplacement(
+                  MaterialPageRoute(builder: (context) => LandingPage()));
             },
-            child: Text(
-              'Sign out',
-              style: TextStyle(color: Colors.white),
+            color: Colors.blue[900],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Sign Out',
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
             ),
-            color: Colors.blue,
+            elevation: 5,
             shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
           ),
         ]);
   }
