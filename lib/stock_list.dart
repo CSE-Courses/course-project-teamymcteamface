@@ -1,13 +1,35 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'dart:async';
+import 'package:http/http.dart' as http;
+import 'stock_ticker.dart';
 
-import 'models/stock.dart';
+class StockList extends StatefulWidget {
+  @override
+  _StockList createState() => _StockList();
+}
 
-class StockList extends StatelessWidget{
+class _StockList extends State<StockList>{
 
-  final List<Stock> stocks;
-  StockList({this.stocks});
+  var stockTicker;
+
+  Future<String> getData() async {
+    var response = await http.get('https://finnhub.io/api/v1/stock/symbol?exchange=US&token=bug8dff48v6qf6lcdlq0',
+        headers: {
+          "Accept": "application/json"
+
+        });
+    this.setState(() {
+      stockTicker = stockTickerFromJson(response.body);
+    });
+
+  }
 
 
+  @override
+  void initState() {
+    this.getData();
+  }
 
 
   @override
@@ -16,9 +38,10 @@ class StockList extends StatelessWidget{
         separatorBuilder: (context, index){
           return Divider(color: Colors.grey[400]);
         },
-        itemCount: stocks.length,
+        itemCount: stockTicker == null ? 0 : stockTicker.length,
         itemBuilder: (context, index){
-          final stock = stocks[index];
+
+          final stock = stockTicker[index];
 
           return ListTile(
             contentPadding: EdgeInsets.all(10),
@@ -27,9 +50,9 @@ class StockList extends StatelessWidget{
                 children: <Widget>[
                   Text("${stock.symbol}",
                       style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500)),
-                  Text("${stock.company}",
+                  Text("${stock.description}",
                       style: TextStyle(color: Colors.black, fontSize: 20)),
-                        ButtonTheme(
+                  ButtonTheme(
                     minWidth: 40.0,
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
@@ -62,4 +85,10 @@ class StockList extends StatelessWidget{
           );
         }
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }}
