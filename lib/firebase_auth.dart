@@ -162,3 +162,21 @@ void userSignOut() async {
 String getEmail() {
   return email;
 }
+
+Future<int> requestChangePassword(String currPW, String newPW) async {
+  final user = await _auth.currentUser();
+  AuthCredential cred = EmailAuthProvider.getCredential(email: email, password: currPW);
+  user.reauthenticateWithCredential(cred).whenComplete(() {
+    user.updatePassword(newPW).whenComplete(() {
+      return 0;
+    }).catchError((error) {
+      print(error);
+      return 2;
+    });
+  }).catchError((error){
+    print(error);
+    return 1;
+  });
+
+  return -1;
+}
