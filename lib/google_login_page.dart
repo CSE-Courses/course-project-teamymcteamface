@@ -10,8 +10,19 @@ class GLoginPage extends StatefulWidget {
 class _LoginPageState extends State<GLoginPage> {
   final _loginKey = GlobalKey<FormState>();
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-  String formEmail;
-  String formPassword;
+  //String formEmail;
+  //String formPassword;
+
+  final emailCtrl = TextEditingController();
+  final passCtrl = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    emailCtrl.dispose();
+    passCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +55,7 @@ class _LoginPageState extends State<GLoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               TextFormField(
+                controller: emailCtrl,
                 style: style,
                 decoration: InputDecoration(
                   hintText: 'Email',
@@ -58,15 +70,16 @@ class _LoginPageState extends State<GLoginPage> {
                   }
                   return null;
                 },
-                onSaved: (String value) {
+                /*onSaved: (String value) {
                   formEmail = value.trim();
                   print(formEmail);
-                },
+                },*/
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5.0),
               ),
               TextFormField(
+                controller: passCtrl,
                 obscureText: true,
                 style: style,
                 decoration: InputDecoration(
@@ -82,9 +95,9 @@ class _LoginPageState extends State<GLoginPage> {
                   }
                   return null;
                 },
-                onSaved: (String value) {
+                /*onSaved: (String value) {
                   formPassword = value.trim();
-                },
+                },*/
               ),
               Center(
                 child: Padding(
@@ -98,8 +111,11 @@ class _LoginPageState extends State<GLoginPage> {
                       padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                       onPressed: () {
                         if (_loginKey.currentState.validate()) {
-                          _loginKey.currentState.save();
-                          signInWithEmail(formEmail, formPassword).whenComplete((){
+                          //_loginKey.currentState.save();
+                          String email = emailCtrl.text.trim();
+                          String pass = passCtrl.text.trim();
+                          signInWithEmail(email, pass).then((value){
+                            print(currUID);
                             if(currUID != null) { // Temporary hacky way to check if auth is valid
                               Navigator.of(context).push(
                                 MaterialPageRoute(
@@ -110,6 +126,8 @@ class _LoginPageState extends State<GLoginPage> {
                                 ),
                               );
                             }
+                          }).catchError((error) {
+                            print(error);
                           });
                         }
                       },
