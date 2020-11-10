@@ -1,10 +1,28 @@
 import 'dart:io';
 import 'package:StockMarketApp/landingPage.dart';
+import 'package:StockMarketApp/profileUpdate.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'firebase_auth.dart';
-import 'google_login_page.dart';
+import 'profileUpdate.dart';
+
+File _profilePic;
+
+Future<String> update() async {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseUser currentUser = await _auth.currentUser();
+  final ref = firebaseDB.reference().child("users");
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value == null) {
+    ref.update({"photo": _profilePic, "name": nameChange.text});
+  }
+  return 'update succeeded';
+}
 
 void main() => runApp(ProfileApp());
 
@@ -39,8 +57,6 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  File _profilePic;
-
   Future getProfilPic() async {
     final image = await ImagePicker.pickImage(
         source: ImageSource.gallery, preferredCameraDevice: CameraDevice.front);
@@ -110,6 +126,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               SizedBox(
                 height: 20,
               ),
+<<<<<<< HEAD
+              subtitle: Text(
+                'Trader',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+              )),
+          ListTile(
+=======
               ListTile(
                   title: Text(
                     'Position',
@@ -134,13 +157,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
           ),*/
  ListTile(
+>>>>>>> dbdbbd246c33cdf88114ea37db0f304c0ad083fd
               title: Text(
-                'Name', // Will display email for now because of firebase problems.
+                'Name',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                name, // Will display email for now because of firebase problems.
-                //"John Doe",
+                nameChange.text == "" ? name : nameChange.text,
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
               )),
           ListTile(
@@ -148,10 +171,31 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 'Bio',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
+              // subtitle: Text(
+              //   'Beginner trader hoping to improve on my skills. If you have any advice let me know.',
+              //   style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+              // )
               subtitle: Text(
-                'Beginner trader hoping to improve on my skills. If you have any advice let me know.',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+                bioChange.text,
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
               )),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).push(
+                  MaterialPageRoute(builder: (context) => ProfileUpdate()));
+            },
+            color: Colors.blue[900],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Update Profile',
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+            ),
+            elevation: 5,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+          ),
           RaisedButton(
             onPressed: () {
               if (signInMethod == "google") {

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'profileUpdate.dart';
 
 // these variables will store FirebaseUser info
 String name;
@@ -10,6 +11,7 @@ String imageUrl;
 String currUID;
 String signInMethod;
 String password;
+String bio;
 
 final firebaseDB = FirebaseDatabase.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -44,6 +46,7 @@ Future<String> signInWithGoogle() async {
   email = user.email;
   imageUrl = user.photoUrl;
   currUID = currentUser.uid;
+  bio = bioChange.text;
 
   // create firebase db reference to access entries
   final ref = firebaseDB.reference().child("users");
@@ -59,7 +62,8 @@ Future<String> signInWithGoogle() async {
       "name": name,
       "uid": currUID,
       "email": email,
-      "photo": imageUrl
+      "photo": imageUrl,
+      "bio": "Update profile to make bio"
     });
   }
 
@@ -130,7 +134,7 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "name": name,
       "uid": currUID,
       "email": email,
-      "photo": imageUrl
+      "photo": imageUrl,
     });
 =======
 Future<void> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
