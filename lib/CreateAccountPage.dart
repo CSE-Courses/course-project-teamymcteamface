@@ -15,31 +15,37 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final _createAccFormKey = GlobalKey<FormState>();
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-  String formName;
-  String formEmail;
-  String formPassword;
+  //String formName;
+  //String formEmail;
+  //String formPassword;
+
+  final nameCtrl = TextEditingController();
+  final emailCtrl = TextEditingController();
+  final passCtrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     final nameField = TextFormField(
-        obscureText: false,
-        style: style,
-        decoration: InputDecoration(
-            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Your name",
-            border:
-            OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-        validator: (value) {
-          if (value.isEmpty) {
-            return "Please enter your name.";
-          }
-          return null;
-        },
-        onSaved: (String value) {
-          formName = value.trim();
+      controller: nameCtrl,
+      obscureText: false,
+      style: style,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Your name",
+          border:
+          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+      validator: (value) {
+        if (value.isEmpty) {
+          return "Please enter your name.";
         }
+        return null;
+        },
+        /*onSaved: (String value) {
+          formName = value.trim();
+        }*/
     );
     final emailField = TextFormField(
+      controller: emailCtrl,
       obscureText: false,
       style: style,
       decoration: InputDecoration(
@@ -53,11 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
         }
         return null;
       },
-      onSaved: (String value) {
+      /*onSaved: (String value) {
         formEmail = value.trim();
-      }
+      }*/
     );
     final passwordField = TextFormField(
+      controller: passCtrl,
       obscureText: true,
       style: style,
       decoration: InputDecoration(
@@ -71,9 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
         }
         return null;
       },
-      onSaved: (String value) {
+      /*onSaved: (String value) {
         formPassword = value.trim();
-      }
+      }*/
     );
     final createAccButton = Material(
       elevation: 5.0,
@@ -84,10 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
           if(_createAccFormKey.currentState.validate()) {
-            _createAccFormKey.currentState.save();
+            //_createAccFormKey.currentState.save();
+            String name = nameCtrl.text.trim();
+            String email = emailCtrl.text.trim();
+            String pass = passCtrl.text.trim();
 
             // Move to NavPage when signup is completed.
-            signUpWithEmail(formName, formEmail, formPassword, context).whenComplete(() {
+            signUpWithEmail(name, email, pass, context).whenComplete(() {
               if(currUID != null) { // Temporary hacky way to check if auth is valid
                 Navigator.of(context).push(
                   MaterialPageRoute(

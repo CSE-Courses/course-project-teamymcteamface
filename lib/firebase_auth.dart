@@ -72,72 +72,65 @@ void signOutGoogle() async {
 }
 
 Future<void> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
-  try {
-    _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword);
-  } catch(e) {
-    // Display alert if signup fails for some reason.
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text("Error"),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text(e.code),
-                Text(e.message),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            FlatButton(
-              child: Text('Ok'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      }
-    );
-  }
-  final FirebaseUser currentUser = await _auth.currentUser();
-  UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
-  userUpdateInfo.displayName = formName;
+  print(formName);
+  print(formEmail);
+  print(formPassword);
+  print('123');
 
-  currentUser.reload();
-  print(currentUser.displayName);
+  int succeed = 0;
+  FirebaseUser currentUser;
 
-  //name = formName;
-  name = currentUser.displayName;
-  email = currentUser.email;
-  currUID = currentUser.uid;
-  imageUrl = "";
+  _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword).then((credential) {
+    currentUser = credential.user;
+    UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
+    userUpdateInfo.displayName = formName;
 
-  // create firebase db reference to access entries
-  final ref = firebaseDB.reference().child("users");
+    currentUser.reload();
+    //print(currentUser.displayName);
 
-  // check if user exists; if not create new entry in db
-  ref.orderByChild("uid").equalTo(currentUser.uid);
-  DataSnapshot snapshot = await ref.orderByChild("uid").equalTo(currentUser.uid).once();
-  if (snapshot.value == null) {
-    print("adding new user");
-    ref.push().set({
-      // add to database
-      "name": name,
-      "uid": currUID,
-      "email": email,
-      "photo": imageUrl
-    });
+    name = formName;
+    //name = currentUser.displayName;
+    email = currentUser.email;
+    currUID = currentUser.uid;
+    imageUrl = "";
+
+    succeed = 1;
+  }).catchError((error) {
+    print(error);
+  });
+
+  // Didn't put this in then() because await keyword doesn't work in then().
+  if(succeed == 1) {
+    // create firebase db reference to access entries
+    final ref = firebaseDB.reference().child("users");
+
+    // check if user exists; if not create new entry in db
+    ref.orderByChild("email").equalTo(currentUser.uid);
+    DataSnapshot snapshot = await ref.orderByChild("email").equalTo(currentUser.uid).once();
+    if (snapshot.value == null) {
+      print("adding new user");
+      ref.push().set({
+        // add to database
+        "name": name,
+        "uid": currUID,
+        "email": email,
+        "photo": imageUrl
+      });
+    }
   }
 }
 
 Future<void> signInWithEmail(String formEmail, String formPassword) async {
-  _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword);
-  final FirebaseUser currentUser = await _auth.currentUser();
-  //name = formName;
-  email = currentUser.email;
-  currUID = currentUser.uid;
+  _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword).then((credential) {
+    final FirebaseUser currentUser = credential.user;
+    email = currentUser.email;
+    currUID = currentUser.uid;
+    return;
+  }).catchError((error) {
+    print(error);
+    return;
+  });
+  return;
 }
 
 void signOutEmail() async {
@@ -161,4 +154,26 @@ void userSignOut() async {
 
 String getEmail() {
   return email;
+}
+
+FirebaseAuth getAuth() {
+  return _auth;
+}
+
+Future<int> requestChangePassword(String currPW, String newPW) async {
+  final user = await _auth.currentUser();
+  AuthCredential cred = EmailAuthProvider.getCredential(email: email, password: currPW);
+  user.reauthenticateWithCredential(cred).then((value) {
+    user.updatePassword(newPW).whenComplete(() {
+      return 0;
+    }).catchError((error) {
+      print(error);
+      return 2;
+    });
+  }).catchError((error) {
+    print(error);
+    return 1;
+  });
+
+  return -1;
 }
