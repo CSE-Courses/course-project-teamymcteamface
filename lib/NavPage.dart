@@ -8,12 +8,10 @@ void main() => runApp(NavPage());
 
 /// This Widget is the main application widget.
 class NavPage extends StatelessWidget {
-  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
       home: MyStatefulWidget(),
     );
   }
