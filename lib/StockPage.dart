@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'stock_list.dart';
+import 'package:provider/provider.dart';
 import 'stock_ticker.dart';
 import 'dart:convert';
 import 'dart:async';
@@ -57,6 +58,7 @@ class HomePage extends StatelessWidget {
   final date = DateTime.parse(DateTime.now().toString());
 
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,25 +83,26 @@ class HomePage extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                         Padding(
                           padding: const EdgeInsets.only(top: 8),
-                          child: SizedBox(
-                            height: 50,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  hintStyle: TextStyle(color: Colors.grey[500]),
-                                  hintText: "Search",
-                                  prefix: Icon(Icons.search),
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  border: OutlineInputBorder(
-                                      borderSide:
-                                      BorderSide(width: 0, style: BorderStyle.none),
-                                      borderRadius:
-                                      BorderRadius.all(Radius.circular(16)))),
-                            ),
-                          ),
+                       //old search bar
+                          // child: SizedBox(
+                          //   height: 50,
+                          //   child: TextField(
+                          //     decoration: InputDecoration(
+                          //         hintStyle: TextStyle(color: Colors.grey[500]),
+                          //         hintText: "Search",
+                          //         prefix: Icon(Icons.search),
+                          //         fillColor: Colors.white,
+                          //         filled: true,
+                          //         border: OutlineInputBorder(
+                          //             borderSide:
+                          //             BorderSide(width: 0, style: BorderStyle.none),
+                          //             borderRadius:
+                          //             BorderRadius.all(Radius.circular(16)))),
+                          //   ),
+                          // ),
                         ),
                         SizedBox(
-                            height: MediaQuery.of(context).size.height - 270,
+                            height: MediaQuery.of(context).size.height,
                             child: StockList()
                         )
                       ])))
