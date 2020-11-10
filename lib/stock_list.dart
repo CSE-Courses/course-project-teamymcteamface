@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'stock_ticker.dart';
 import 'WebView.dart';
+import 'get_stock_price.dart';
 
 class StockList extends StatefulWidget {
   @override
@@ -15,10 +16,10 @@ class _StockList extends State<StockList>{
   var stockTicker;
 
   Future<String> getData() async {
-    var response = await http.get('https://finnhub.io/api/v1/stock/symbol?exchange=US&token=bug8dff48v6qf6lcdlq0',
+    var response = await http.get(
+        'https://finnhub.io/api/v1/stock/symbol?exchange=US&token=bug8dff48v6qf6lcdlq0',
         headers: {
           "Accept": "application/json"
-
         });
     this.setState(() {
       stockTicker = stockTickerFromJson(response.body);
@@ -27,27 +28,17 @@ class _StockList extends State<StockList>{
 
   }
 
-
-
-
-  // var cost;
-  // Future<String> getStockPrice(String x) async {
+  // void setCost(){
+  //   var x = new getPrice();
+  // var y;
+  //   stockTicker.forEach((stock) {
+  //   x.getStockPrice(stock.symbol);
   //
-  //   String url = 'https://finnhub.io/api/v1/quote?symbol=' + x + '&token=bug8dff48v6qf6lcdlq0';
+  //   stock.cost = x.price;
   //
-  //   var response = await http.get(url,
-  //       headers: {
-  //         "Accept": "application/json"
-  //
-  //       });
-  //
-  //   List priceList = stockTickerFromJson(response.body);
-  //   print(priceList[1]["c"]);
-  //
-  //     cost = priceList[1]["c"];
-  //
-  //   return cost;
+  //   });
   // }
+
 
   TextEditingController editingController = TextEditingController();
 
@@ -56,6 +47,7 @@ class _StockList extends State<StockList>{
   void initState() {
     this.getData();
     super.initState();
+
   }
 
   void filterSearchResults(String query) {
@@ -117,19 +109,20 @@ class _StockList extends State<StockList>{
           ),
         ),
         Expanded(
+
     child: ListView.separated(
 
         separatorBuilder: (context, index){
           return Divider(color: Colors.grey[400]);
         },
         // stockTicker == null ? 0 :
-        itemCount: mutStockList.length,
+        itemCount: mutStockList == null ? 0 : mutStockList.length,
         itemBuilder: (context, index){
-
           final stock = mutStockList[index];
 
           return FlatButton(
             child:  ListTile(
+
             contentPadding: EdgeInsets.all(10),
             title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,7 +148,7 @@ class _StockList extends State<StockList>{
 
                 ]),
             trailing: Column(children: <Widget>[
-              Text("${stock.symbol}",
+              Text("${stock.cost}",
                   style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500)),
               Container(
                 width: 70,
