@@ -15,6 +15,7 @@ class StockTicker {
     this.displaySymbol,
     this.symbol,
     this.type,
+    this.cost,
   });
 
   Currency currency;
@@ -22,6 +23,7 @@ class StockTicker {
   String displaySymbol;
   String symbol;
   Type type;
+  double cost;
 
   factory StockTicker.fromJson(Map<String, dynamic> json) => StockTicker(
     currency: currencyValues.map[json["currency"]],
@@ -77,3 +79,4 @@ class EnumValues<T> {
     return reverseMap;
   }
 }
+//
