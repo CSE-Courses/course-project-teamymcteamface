@@ -1,13 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'NavPage.dart';
 import 'firebase_auth.dart';
 
-class GLoginPage extends StatefulWidget {
+
+void main() => runApp(GLoginPage());
+
+class GLoginPage extends StatelessWidget {
+  //@override
+  //_LoginPageState createState() => _LoginPageState();
+
   @override
-  _LoginPageState createState() => _LoginPageState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: _LoginPageState(),
+        initialRoute: '/login',
+        routes: {
+          '/login': (context) => _LoginPageState(),
+          '/passReset':(context) => ResetPasswordWidget(),
+        }
+    );
+  }
 }
 
-class _LoginPageState extends State<GLoginPage> {
+class _LoginPageState extends StatefulWidget {
+  _LoginPageState({Key key}) : super(key: key);
+
+  @override
+  LoginPageState createState() => LoginPageState();
+}
+
+class LoginPageState extends State<_LoginPageState> {
   final _loginKey = GlobalKey<FormState>();
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   //String formEmail;
@@ -149,7 +172,9 @@ class _LoginPageState extends State<GLoginPage> {
                   child: MaterialButton(
                     minWidth: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/passReset');
+                    },
                     child: Text("Reset password",
                         textAlign: TextAlign.center,
                         style: style.copyWith(color: Colors.white)),
@@ -200,5 +225,105 @@ class _LoginPageState extends State<GLoginPage> {
         ),
       ),
     );
+  }
+}
+
+
+class ResetPasswordWidget extends StatefulWidget {
+  ResetPasswordWidget({Key key}) : super(key: key);
+
+  @override
+  ResetPassword createState() => ResetPassword();
+}
+
+class ResetPassword extends State<ResetPasswordWidget> {
+  final pwResetFormKey = GlobalKey<FormState>();
+  TextStyle style = TextStyle(
+      fontFamily: 'Montserrat', fontSize: 20.0, color: Colors.black);
+
+  final emailCtrl = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Center(
+            child: Form(
+              key: pwResetFormKey,
+              child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
+                      child: TextFormField(
+                        controller:emailCtrl,
+                        validator: (value) {
+                          if (value.trim().isEmpty) {
+                            return 'Please enter your email';
+                          }
+                          return null;
+                        },
+                        style: style,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                            hintText: "Email",
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(32.0),
+                        color: Color(0xff01A0C7),
+                        child: MaterialButton(
+                          onPressed: () {
+                            if (pwResetFormKey.currentState.validate()) {
+                              // Request password change. Reauthentication is done in requestChangePassword().
+                              FirebaseAuth _auth = getAuth();
+                              _auth.sendPasswordResetEmail(email: emailCtrl.text.trim()).then((value) {
+                                //Navigator.pop(context);
+                              }).catchError((error) {
+                                print(error);
+                              });
+                            }
+                          },
+                          minWidth: MediaQuery.of(context).size.width,
+                          padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                          child: Text("Submit",
+                              textAlign: TextAlign.center,
+                              style: style.copyWith(color: Colors.white, fontSize: 12.0)),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 0.0),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(32.0),
+                        color: Color(0xff01A0C7),
+                        child: MaterialButton(
+                          minWidth: MediaQuery.of(context).size.width,
+                          padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: style.copyWith(color: Colors.white, fontSize: 12.0)),
+                        ),
+                      ),
+                    ),
+                  ]
+              ),
+            )
+        )
+    );
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    emailCtrl.dispose();
+    super.dispose();
   }
 }

@@ -181,22 +181,25 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
               ),
-              FlatButton(
-                child: Text(
-                  'Change password',
-                  style: TextStyle(color: Colors.white),
-                ),
-                onPressed: () {
-                  /*Navigator.push(
+              Padding(
+                padding: EdgeInsets.fromLTRB(0.0, -20.0, 0.0, 0.0),
+                child: FlatButton(
+                  child: Text(
+                    'Change password',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    /*Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ChangePasswordWidget()),
               );*/
-                  Navigator.pushNamed(context, '/passChange');
-                },
-                color: Colors.blue,
-                shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-              ),
+                    Navigator.pushNamed(context, '/passChange');
+                  },
+                  color: Colors.blue,
+                  shape:
+                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                ),
+              )
             ]),
     );
   }
@@ -304,8 +307,11 @@ class ChangePassword extends State<ChangePasswordWidget> {
                           onPressed: () {
                             if (pwChangeFormKey.currentState.validate()) {
                               // Request password change. Reauthentication is done in requestChangePassword().
-                              requestChangePassword(currPWCtrl.text.trim(), newPWCtrl.text.trim()).whenComplete(() {
-                                Navigator.pop(context);
+                              requestChangePassword(currPWCtrl.text.trim(), newPWCtrl.text.trim()).then((value) {
+                                print(value);
+                                if(value == 0) {
+                                  Navigator.pop(context);
+                                }
                               }).catchError((error) {
                                 print(error);
                               });

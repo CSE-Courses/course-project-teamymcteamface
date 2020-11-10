@@ -95,10 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
             String name = nameCtrl.text.trim();
             String email = emailCtrl.text.trim();
             String pass = passCtrl.text.trim();
-            print(name);
-            print(email);
-            print(pass);
-            print('1');
 
             // Move to NavPage when signup is completed.
             signUpWithEmail(name, email, pass, context).whenComplete(() {

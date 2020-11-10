@@ -75,7 +75,7 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
   print(formName);
   print(formEmail);
   print(formPassword);
-  print('2');
+  print('123');
 
   int succeed = 0;
   FirebaseUser currentUser;
@@ -86,7 +86,7 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
     userUpdateInfo.displayName = formName;
 
     currentUser.reload();
-    print(currentUser.displayName);
+    //print(currentUser.displayName);
 
     name = formName;
     //name = currentUser.displayName;
@@ -95,6 +95,8 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
     imageUrl = "";
 
     succeed = 1;
+  }).catchError((error) {
+    print(error);
   });
 
   // Didn't put this in then() because await keyword doesn't work in then().
@@ -123,10 +125,12 @@ Future<void> signInWithEmail(String formEmail, String formPassword) async {
     final FirebaseUser currentUser = credential.user;
     email = currentUser.email;
     currUID = currentUser.uid;
+    return;
   }).catchError((error) {
-    print('hi');
     print(error);
+    return;
   });
+  return;
 }
 
 void signOutEmail() async {
@@ -152,17 +156,21 @@ String getEmail() {
   return email;
 }
 
+FirebaseAuth getAuth() {
+  return _auth;
+}
+
 Future<int> requestChangePassword(String currPW, String newPW) async {
   final user = await _auth.currentUser();
   AuthCredential cred = EmailAuthProvider.getCredential(email: email, password: currPW);
-  user.reauthenticateWithCredential(cred).whenComplete(() {
+  user.reauthenticateWithCredential(cred).then((value) {
     user.updatePassword(newPW).whenComplete(() {
       return 0;
     }).catchError((error) {
       print(error);
       return 2;
     });
-  }).catchError((error){
+  }).catchError((error) {
     print(error);
     return 1;
   });
