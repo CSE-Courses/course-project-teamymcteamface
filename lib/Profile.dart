@@ -181,25 +181,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0.0, -20.0, 0.0, 0.0),
-                child: FlatButton(
-                  child: Text(
-                    'Change password',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onPressed: () {
-                    /*Navigator.push(
+              FlatButton(
+                child: Text(
+                  'Change password',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {
+                  /*Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ChangePasswordWidget()),
               );*/
-                    Navigator.pushNamed(context, '/passChange');
-                  },
-                  color: Colors.blue,
-                  shape:
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-                ),
-              )
+                  Navigator.pushNamed(context, '/passChange');
+                },
+                color: Colors.blue,
+                shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+              ),
             ]),
     );
   }
