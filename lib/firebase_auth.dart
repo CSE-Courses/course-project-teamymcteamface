@@ -9,6 +9,7 @@ String email;
 String imageUrl;
 String currUID;
 String signInMethod;
+String password;
 
 final firebaseDB = FirebaseDatabase.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -71,6 +72,67 @@ void signOutGoogle() async {
   print("User Sign Out");
 }
 
+Future<void> signUpWithEmail(String formName, String formEmail,
+    String formPassword, BuildContext context) async {
+  try {
+    _auth.createUserWithEmailAndPassword(
+        email: formEmail, password: formPassword);
+  } catch (e) {
+    // Display alert if signup fails for some reason.
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("Error"),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(e.code),
+                  Text(e.message),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Ok'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        });
+  }
+  final FirebaseUser currentUser = await _auth.currentUser();
+  UserUpdateInfo userUpdateInfo = UserUpdateInfo();
+  userUpdateInfo.displayName = formName;
+
+  currentUser.reload();
+  print(currentUser.displayName);
+
+  //name = formName;
+  name = currentUser.displayName;
+  email = currentUser.email;
+  currUID = currentUser.uid;
+  imageUrl = "";
+
+  // create firebase db reference to access entries
+  final ref = firebaseDB.reference().child("users");
+
+  // check if user exists; if not create new entry in db
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+  if (snapshot.value == null) {
+    print("adding new user");
+    ref.push().set({
+      // add to database
+      "name": name,
+      "uid": currUID,
+      "email": email,
+      "photo": imageUrl
+    });
+=======
 Future<void> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
   print(formName);
   print(formEmail);
@@ -144,7 +206,7 @@ void userSignOut() async {
   email = null;
   imageUrl = null;
 
-  if(signInMethod == "google") {
+  if (signInMethod == "google") {
     signOutGoogle();
     return;
   }
@@ -155,7 +217,6 @@ void userSignOut() async {
 String getEmail() {
   return email;
 }
-
 FirebaseAuth getAuth() {
   return _auth;
 }
