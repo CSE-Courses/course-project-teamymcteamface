@@ -4,9 +4,11 @@
 
 import 'dart:convert';
 
-List<StockTicker> stockTickerFromJson(String str) => List<StockTicker>.from(json.decode(str).map((x) => StockTicker.fromJson(x)));
+List<StockTicker> stockTickerFromJson(String str) => List<StockTicker>.from(
+    json.decode(str).map((x) => StockTicker.fromJson(x)));
 
-String stockTickerToJson(List<StockTicker> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String stockTickerToJson(List<StockTicker> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class StockTicker {
   StockTicker({
@@ -24,28 +26,25 @@ class StockTicker {
   Type type;
 
   factory StockTicker.fromJson(Map<String, dynamic> json) => StockTicker(
-    currency: currencyValues.map[json["currency"]],
-    description: json["description"],
-    displaySymbol: json["displaySymbol"],
-    symbol: json["symbol"],
-    type: typeValues.map[json["type"]],
-  );
+        currency: currencyValues.map[json["currency"]],
+        description: json["description"],
+        displaySymbol: json["displaySymbol"],
+        symbol: json["symbol"],
+        type: typeValues.map[json["type"]],
+      );
 
   Map<String, dynamic> toJson() => {
-    "currency": currencyValues.reverse[currency],
-    "description": description,
-    "displaySymbol": displaySymbol,
-    "symbol": symbol,
-    "type": typeValues.reverse[type],
-  };
+        "currency": currencyValues.reverse[currency],
+        "description": description,
+        "displaySymbol": displaySymbol,
+        "symbol": symbol,
+        "type": typeValues.reverse[type],
+      };
 }
 
 enum Currency { USD, EMPTY }
 
-final currencyValues = EnumValues({
-  "": Currency.EMPTY,
-  "USD": Currency.USD
-});
+final currencyValues = EnumValues({"": Currency.EMPTY, "USD": Currency.USD});
 
 enum Type { EQS, EMPTY, ETF, DR, UNT, STP, WAR, PRF, BND, TRT, SP, PFS }
 

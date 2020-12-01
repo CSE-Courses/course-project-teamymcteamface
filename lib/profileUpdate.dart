@@ -30,6 +30,20 @@ Future<String> update() async {
   return 'update succeeded';
 }
 
+Future<String> updateProfile() async {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseUser currentUser = await _auth.currentUser();
+  final ref = firebaseDB.reference().child("users");
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value != null) {
+    ref.set({"photo": _profilePic});
+  }
+  return 'update succeeded';
+}
+
 void main() => runApp(ProfileUpdate());
 
 class ProfileUpdate extends StatelessWidget {
@@ -55,7 +69,7 @@ class ProfileUpdate extends StatelessWidget {
                 FlatButton.icon(
                   // Temporarily commented out because of overflow
                   onPressed: () {
-                    // getCoverPic();
+                    updateProfile();
                   },
                   icon: Icon(
                     Icons.photo,

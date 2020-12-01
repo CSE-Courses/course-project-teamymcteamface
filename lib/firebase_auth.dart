@@ -136,8 +136,11 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "email": email,
       "photo": imageUrl,
     });
-=======
-Future<void> signUpWithEmail(String formName, String formEmail, String formPassword, BuildContext context) async {
+  }
+}
+
+Future<void> signUpWithEmail2(String formName, String formEmail,
+    String formPassword, BuildContext context) async {
   print(formName);
   print(formEmail);
   print(formPassword);
@@ -146,9 +149,11 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
   int succeed = 0;
   FirebaseUser currentUser;
 
-  _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword).then((credential) {
+  _auth
+      .createUserWithEmailAndPassword(email: formEmail, password: formPassword)
+      .then((credential) {
     currentUser = credential.user;
-    UserUpdateInfo userUpdateInfo  = UserUpdateInfo();
+    UserUpdateInfo userUpdateInfo = UserUpdateInfo();
     userUpdateInfo.displayName = formName;
 
     currentUser.reload();
@@ -166,13 +171,14 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
   });
 
   // Didn't put this in then() because await keyword doesn't work in then().
-  if(succeed == 1) {
+  if (succeed == 1) {
     // create firebase db reference to access entries
     final ref = firebaseDB.reference().child("users");
 
     // check if user exists; if not create new entry in db
     ref.orderByChild("email").equalTo(currentUser.uid);
-    DataSnapshot snapshot = await ref.orderByChild("email").equalTo(currentUser.uid).once();
+    DataSnapshot snapshot =
+        await ref.orderByChild("email").equalTo(currentUser.uid).once();
     if (snapshot.value == null) {
       print("adding new user");
       ref.push().set({
@@ -187,7 +193,9 @@ Future<void> signUpWithEmail(String formName, String formEmail, String formPassw
 }
 
 Future<void> signInWithEmail(String formEmail, String formPassword) async {
-  _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword).then((credential) {
+  _auth
+      .signInWithEmailAndPassword(email: formEmail, password: formPassword)
+      .then((credential) {
     final FirebaseUser currentUser = credential.user;
     email = currentUser.email;
     currUID = currentUser.uid;
@@ -221,13 +229,15 @@ void userSignOut() async {
 String getEmail() {
   return email;
 }
+
 FirebaseAuth getAuth() {
   return _auth;
 }
 
 Future<int> requestChangePassword(String currPW, String newPW) async {
   final user = await _auth.currentUser();
-  AuthCredential cred = EmailAuthProvider.getCredential(email: email, password: currPW);
+  AuthCredential cred =
+      EmailAuthProvider.getCredential(email: email, password: currPW);
   user.reauthenticateWithCredential(cred).then((value) {
     user.updatePassword(newPW).whenComplete(() {
       return 0;

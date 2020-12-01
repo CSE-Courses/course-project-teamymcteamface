@@ -33,14 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Your name",
           border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
       validator: (value) {
         if (value.isEmpty) {
           return "Please enter your name.";
         }
         return null;
-        },
-        /*onSaved: (String value) {
+      },
+      /*onSaved: (String value) {
           formName = value.trim();
         }*/
     );
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
-          if(_createAccFormKey.currentState.validate()) {
+          if (_createAccFormKey.currentState.validate()) {
             //_createAccFormKey.currentState.save();
             String name = nameCtrl.text.trim();
             String email = emailCtrl.text.trim();
@@ -98,7 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Move to NavPage when signup is completed.
             signUpWithEmail(name, email, pass, context).whenComplete(() {
-              if(currUID != null) { // Temporary hacky way to check if auth is valid
+              if (currUID != null) {
+                // Temporary hacky way to check if auth is valid
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     settings: RouteSettings(name: "/NavPage"),

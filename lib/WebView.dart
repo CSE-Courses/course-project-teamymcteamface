@@ -15,8 +15,6 @@ class WebPageView extends StatefulWidget {
 class _WebPageViewState extends State<WebPageView> {
   @override
   Widget build(BuildContext context) {
-
-
     return WebviewScaffold(
       url: "https://in.tradingview.com/chart/?symbol=" + widget.stockName,
       withJavascript: true,
