@@ -5,7 +5,7 @@ import 'NavPage.dart';
 
 void main() => runApp(BuySell());
 final amountController = TextEditingController();
-int total = 0;
+int total;
 
 class BuySell extends StatelessWidget {
   @override
@@ -34,6 +34,7 @@ class _BuySell extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           title: Text('Number Field increment decrement'),
         ),
@@ -128,11 +129,11 @@ class _BuySell extends State<MyStatefulWidget> {
                               ),
                               onTap: () {
                                 int currentValue = int.parse(augment.text);
-                                total = int.parse(amountController.text) +
-                                    int.parse(augment.text);
 
                                 setState(() {
                                   currentValue--;
+                                  // total = int.parse(amountController.text) *
+                                  //     int.parse(augment.text);
                                   augment.text =
                                       (currentValue > 0 ? currentValue : 0)
                                           .toString(); // decrementing value

@@ -11,6 +11,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.green,
         body: Container(
           child: Center(

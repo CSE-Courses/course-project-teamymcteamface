@@ -71,6 +71,7 @@ class _StockList extends State<StockList> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Container(
         width: MediaQuery.of(context).size.width,
         color: Colors.green,
