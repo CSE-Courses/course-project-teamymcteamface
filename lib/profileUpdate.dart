@@ -13,36 +13,8 @@ TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 String formName;
 String formBio;
 
-TextEditingController nameChange = TextEditingController();
-TextEditingController bioChange = TextEditingController();
-
-Future<String> update() async {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseUser currentUser = await _auth.currentUser();
-  final ref = firebaseDB.reference().child("users");
-  ref.orderByChild("uid").equalTo(currentUser.uid);
-  DataSnapshot snapshot =
-      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
-
-  if (snapshot.value != null) {
-    ref.set({"bio": bioChange.text, "name": nameChange.text});
-  }
-  return 'update succeeded';
-}
-
-Future<String> updateProfile() async {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseUser currentUser = await _auth.currentUser();
-  final ref = firebaseDB.reference().child("users");
-  ref.orderByChild("uid").equalTo(currentUser.uid);
-  DataSnapshot snapshot =
-      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
-
-  if (snapshot.value != null) {
-    ref.set({"photo": _profilePic});
-  }
-  return 'update succeeded';
-}
+// TextEditingController nameChange = TextEditingController();
+// TextEditingController bioChange = TextEditingController();
 
 void main() => runApp(ProfileUpdate());
 
