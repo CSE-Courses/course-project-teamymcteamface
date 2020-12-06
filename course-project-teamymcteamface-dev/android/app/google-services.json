@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "713718064312",
+    "firebase_url": "https://stockmarketapp-c6fee.firebaseio.com",
+    "project_id": "stockmarketapp-c6fee",
+    "storage_bucket": "stockmarketapp-c6fee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713718064312:android:df4e2c197fd4b6c895004d",
+        "android_client_info": {
+          "package_name": "com.example.StockMarketApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713718064312-5hn8r0ob8ka687q7of2pl9h69gl0s8sm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.StockMarketApp",
+            "certificate_hash": "bf7b6f47643b4b03a145629c11739eaa3ee374d2"
+          }
+        },
+        {
+          "client_id": "713718064312-7lq0nvt99kqn4uuo4067mc09u543vami.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQMfCiGhbmBvW84D3s-tnzHmzfi3lERJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713718064312-7lq0nvt99kqn4uuo4067mc09u543vami.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
