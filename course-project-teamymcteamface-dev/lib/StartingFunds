@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+import 'landingPage.dart';
+void main() => runApp(new MyApp());
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Starting Funds Page",
+        home: new Material(
+            child: new Container (
+                padding: const EdgeInsets.all(30.0),
+                color: Colors.green,
+                child: new Container(
+                  child: new Center(
+                      child: new Column(
+                          children : [
+                            new Padding(padding: EdgeInsets.only(top: 140.0)),
+                            new Text('Enter Starting Amount',
+                              style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(3.0, 3.0),
+                                  ),
+                                ],
+                                fontSize: 40.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: 'Shrikhand',
+                              ),
+                            ),
+                            new Padding(padding: EdgeInsets.only(top: 50.0)),
+                            new TextFormField(
+                              decoration: new InputDecoration(
+                                labelText: 'Recommended 5000 Dollars',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                                //fillColor: Colors.green
+                              ),
+                              validator: (val) {
+                                if(val.length==0) {
+                                  return "Email cannot be empty";
+                                }else{
+                                  return null;
+                                }
+                              },
+                              keyboardType: TextInputType.emailAddress,
+                              style: new TextStyle(
+                                fontFamily: "Poppins",
+                              ),
+                            ),
+                            new Padding(padding: EdgeInsets.only(top: 50.0)),
+                            new RaisedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => LandingPage()),
+                              );},
+                              child: const Text('Begin Your Stock Adventure', style: TextStyle(fontSize: 20)),
+                              color: Colors.blue,
+                              textColor: Colors.white,
+                              elevation: 5,
+                            )
+                          ]
+                      )
+                  ),
+                )
+            )
+        )
+    );
+  }
+}
