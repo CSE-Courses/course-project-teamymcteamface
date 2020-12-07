@@ -46,7 +46,6 @@ Future<String> signInWithGoogle() async {
   email = user.email;
   imageUrl = user.photoUrl;
   currUID = currentUser.uid;
-  bio = bioChange.text;
 
   // create firebase db reference to access entries
   final ref = firebaseDB.reference().child("users");
@@ -63,7 +62,6 @@ Future<String> signInWithGoogle() async {
       "uid": currUID,
       "email": email,
       "photo": imageUrl,
-      "bio": "Update profile to make bio"
     });
   }
 
@@ -75,6 +73,8 @@ void signOutGoogle() async {
   await googleSignIn.signOut();
   print("User Sign Out");
 }
+
+final ref = firebaseDB.reference().child("users");
 
 Future<void> signUpWithEmail(String formName, String formEmail,
     String formPassword, BuildContext context) async {
@@ -173,7 +173,6 @@ Future<void> signUpWithEmail2(String formName, String formEmail,
   // Didn't put this in then() because await keyword doesn't work in then().
   if (succeed == 1) {
     // create firebase db reference to access entries
-    final ref = firebaseDB.reference().child("users");
 
     // check if user exists; if not create new entry in db
     ref.orderByChild("email").equalTo(currentUser.uid);
@@ -251,4 +250,35 @@ Future<int> requestChangePassword(String currPW, String newPW) async {
   });
 
   return -1;
+}
+
+String formName;
+String formBio;
+
+TextEditingController nameChange = TextEditingController();
+TextEditingController bioChange = TextEditingController();
+
+Future<String> update() async {
+  final FirebaseUser currentUser = await _auth.currentUser();
+
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value != null) {
+    ref.update({"bio": bioChange.text, "Updated name": nameChange.text});
+  }
+  return 'update succeeded';
+}
+
+Future<String> updateProfile() async {
+  final FirebaseUser currentUser = await _auth.currentUser();
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value != null) {
+    ref.set({"photo": imageUrl});
+  }
+  return 'update succeeded';
 }

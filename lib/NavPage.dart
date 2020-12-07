@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'Profile.dart';
 import 'StockPage.dart';
-import 'landingPage.dart';
-import 'main.dart';
+import 'buySell.dart';
 
 void main() => runApp(NavPage());
 
 /// This Widget is the main application widget.
 class NavPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +27,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List<Widget> _widgetOptions = <Widget>[
-    Text("Home Page Goes Here"),
+    BuySell(stockPrice: 0.0),
     StockPage(),
     ProfileApp(),
   ];
