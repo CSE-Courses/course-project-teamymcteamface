@@ -11,6 +11,20 @@ import 'profileUpdate.dart';
 
 File _profilePic;
 
+Future<String> update() async {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseUser currentUser = await _auth.currentUser();
+  final ref = firebaseDB.reference().child("users");
+  ref.orderByChild("uid").equalTo(currentUser.uid);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value == null) {
+    ref.update({"photo": _profilePic, "name": nameChange.text});
+  }
+  return 'update succeeded';
+}
+
 void main() => runApp(ProfileApp());
 
 /// This Widget is the main application widget.
@@ -109,7 +123,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           subtitle: Text(
             nameChange.text == "" ? name : nameChange.text,
-            // name,
             style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
           )),
       ListTile(
@@ -122,9 +135,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           //   style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
           // )
           subtitle: Text(
-            bioChange.text == ""
-                ? "Please add a bio when you can"
-                : bioChange.text,
+            bioChange.text,
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
           )),
       RaisedButton(

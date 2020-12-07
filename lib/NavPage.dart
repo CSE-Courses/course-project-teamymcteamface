@@ -27,7 +27,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List<Widget> _widgetOptions = <Widget>[
-    BuySell(),
+    BuySell(stockPrice: 0.0),
     StockPage(),
     ProfileApp(),
   ];

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // import "login_page.dart";
 import 'CreateAccountPage.dart';
 import 'google_login_page.dart';
+import 'StartingFunds.dart';
 
 void main() => runApp(LandingPage());
 
@@ -44,7 +45,7 @@ class LandingPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          settings: RouteSettings(name: "/GLoginPage"),
+                          settings: RouteSettings(name: "/Glogin"),
                           builder: (context) {
                             return GLoginPage();
                           },

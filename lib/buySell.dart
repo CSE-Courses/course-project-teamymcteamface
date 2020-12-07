@@ -3,21 +3,22 @@ import 'package:flutter/services.dart';
 
 import 'NavPage.dart';
 
-void main() => runApp(BuySell());
+// void main() => runApp(MyStatefulWidget());
 final amountController = TextEditingController();
 int total = 0;
 
-class BuySell extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyStatefulWidget(),
-    );
-  }
-}
+// class BuySell extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: MyStatefulWidget(),
+//     );
+//   }
+// }
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+class BuySell extends StatefulWidget {
+   final double stockPrice;
+  BuySell({this.stockPrice});
 
   @override
   _BuySell createState() => _BuySell();
@@ -30,7 +31,7 @@ void initState() {
   augment.text = "0"; // Setting the initial value for the field.
 }
 
-class _BuySell extends State<MyStatefulWidget> {
+class _BuySell extends State<BuySell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,24 +41,7 @@ class _BuySell extends State<MyStatefulWidget> {
         body: Column(children: <Widget>[
           Column(children: <Widget>[
             SizedBox(height: 50),
-            TextFormField(
-              controller: amountController,
-              decoration: InputDecoration(
-                hintText: 'Stock Price',
-                contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
-              ),
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Please enter your password';
-                }
-                return null;
-              },
-              /*onSaved: (String value) {
-                  formPassword = value.trim();
-                },*/
-            ),
+            Text("${widget.stockPrice}"),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Center(
