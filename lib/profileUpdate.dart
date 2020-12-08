@@ -1,11 +1,7 @@
 import 'dart:io';
 
 import 'package:StockMarketApp/NavPage.dart';
-import 'package:StockMarketApp/landingPage.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'firebase_auth.dart';
 
 File _profilePic;
@@ -42,7 +38,7 @@ class ProfileUpdate extends StatelessWidget {
                 FlatButton.icon(
                   // Temporarily commented out because of overflow
                   onPressed: () {
-                    updateProfile();
+                    // updateProfile();
                   },
                   icon: Icon(
                     Icons.photo,
@@ -56,26 +52,6 @@ class ProfileUpdate extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4)),
                 ),
-                TextFormField(
-                    controller: nameChange,
-                    style: style,
-                    decoration: InputDecoration(
-                        contentPadding:
-                            EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        hintText: "Change Name",
-                        hintStyle: TextStyle(color: Colors.white)
-                        // border: OutlineInputBorder(
-                        //     borderRadius: BorderRadius.circular(32.0))
-                        ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "Please enter name change";
-                      }
-                      return null;
-                    },
-                    onSaved: (String value) {
-                      formName = value.trim();
-                    }),
                 SizedBox(
                   height: 80,
                 ),

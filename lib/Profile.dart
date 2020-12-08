@@ -2,14 +2,10 @@ import 'dart:io';
 import 'package:StockMarketApp/firebase_auth.dart';
 import 'package:StockMarketApp/landingPage.dart';
 import 'package:StockMarketApp/profileUpdate.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'firebase_auth.dart';
 import 'profileUpdate.dart';
-
-File _profilePic;
 
 void main() => runApp(ProfileApp());
 
@@ -33,24 +29,23 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   File _profilePic;
 
-  Future getProfilPic() async {
-    final image = await ImagePicker.pickImage(
-        source: ImageSource.gallery, preferredCameraDevice: CameraDevice.front);
+  Future<void> getProfilPic() async {
+    final image = await ImagePicker.pickImage(source: ImageSource.gallery);
 
     setState(() {
       _profilePic = image;
     });
   }
 
-  File _coverPic;
+  // File _coverPic;
 
-  Future getCoverPic() async {
-    final image2 = await ImagePicker.pickImage(source: ImageSource.gallery);
+  // Future getCoverPic() async {
+  //   final image2 = await ImagePicker.pickImage(source: ImageSource.gallery);
 
-    setState(() {
-      _coverPic = image2;
-    });
-  }
+  //   setState(() {
+  //     _coverPic = image2;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -70,23 +65,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           InkWell(
             onTap: getProfilPic,
             child: Positioned(
-              bottom: -50,
-              height: -50,
-              child: CircleAvatar(
-                radius: 100,
-                backgroundColor: Colors.blueGrey,
-                child: _profilePic == null
-                    ? CircleAvatar(
-                        backgroundImage: NetworkImage(
-                        imageUrl,
-                      ))
-                    : CircleAvatar(
-                        radius: 100,
-                        backgroundImage: FileImage(_profilePic),
-                      ),
-                // fit: BoxFit.fill,
-              ),
-            ),
+                bottom: -50,
+                height: -50,
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundColor: Colors.blueGrey,
+                  child: _profilePic == null
+                      ? Text("Tap To Add Profile Picture")
+                      : CircleAvatar(
+                          radius: 100,
+                          backgroundImage: FileImage(_profilePic),
+                        ),
+                )),
           )
         ],
       ),
@@ -108,7 +98,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           subtitle: Text(
-            nameChange.text == "" ? name : nameChange.text,
+            name == null ? 'NO NAME' : name,
             // name,
             style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
           )),
@@ -137,6 +127,25 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             'Update Profile',
+            style: TextStyle(fontSize: 25, color: Colors.white),
+          ),
+        ),
+        elevation: 5,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+      ),
+      RaisedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ChangePasswordWidget()),
+          );
+          Navigator.pushNamed(context, '/passChange');
+        },
+        color: Colors.blue[900],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Change Password',
             style: TextStyle(fontSize: 25, color: Colors.white),
           ),
         ),

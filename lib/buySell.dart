@@ -24,6 +24,8 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 TextEditingController augment = TextEditingController();
+TextEditingController augmentTotal = TextEditingController();
+
 @override
 void initState() {
   initState();
@@ -35,9 +37,6 @@ class _BuySell extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomPadding: false,
-        appBar: AppBar(
-          title: Text('Number Field increment decrement'),
-        ),
         body: Column(children: <Widget>[
           Column(children: <Widget>[
             SizedBox(height: 50),
@@ -134,6 +133,7 @@ class _BuySell extends State<MyStatefulWidget> {
                                   currentValue--;
                                   // total = int.parse(amountController.text) *
                                   //     int.parse(augment.text);
+                                  augmentTotal.text = total.toString();
                                   augment.text =
                                       (currentValue > 0 ? currentValue : 0)
                                           .toString(); // decrementing value
@@ -151,7 +151,7 @@ class _BuySell extends State<MyStatefulWidget> {
           ]),
           Container(
               child: Center(
-            child: Text("Total Amount is: " + "$total"),
+            child: Text("Total Amount is: " + augmentTotal.text),
           )),
           Container(
               height: 38.0,

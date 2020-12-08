@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Profile.dart';
 import 'StockPage.dart';
+import 'balance.dart';
 import 'buySell.dart';
 
 void main() => runApp(NavPage());
