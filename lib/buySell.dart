@@ -191,22 +191,21 @@ class _BuySell extends State<BuySell> {
                       // shape: StadiumBorder(),
                       onPressed: () {
                         // Update spent and balance fields in database
-                        double total = double.parse(totalAmount(double.parse(totalQuantity.toString()),
-                            "${widget.stockPrice}"));
-                        double newBalance = 0;
-                        double newSpent = 0;
-                        dbRef.once().then((DataSnapshot snapshot) {
-                          Map<dynamic, dynamic> values = snapshot.value;
-                          newBalance = values["balance"] - total;
-                          newSpent = values["spent"] + total;
-                          print(newBalance);
-                          print(newSpent);
-                          dbRef.update({
-                            "balance": newBalance,
-                            "spent": newSpent
-                          });
-                          setState(() {});
-                        });
+                        // double total = double.parse(totalAmount(
+                        //     double.parse(totalQuantity.toString()),
+                        //     "${widget.stockPrice}"));
+                        // double newBalance = 0;
+                        // double newSpent = 0;
+                        // dbRef.once().then((DataSnapshot snapshot) {
+                        //   Map<dynamic, dynamic> values = snapshot.value;
+                        //   newBalance = values["balance"] - total;
+                        //   newSpent = values["spent"] + total;
+                        //   print(newBalance);
+                        //   print(newSpent);
+                        //   dbRef.update(
+                        //       {"balance": newBalance, "spent": newSpent});
+                        //   setState(() {});
+                        // });
                         // pickBalance.text = (double.parse(pickBalance.text) -
                         //         double.parse(totalAmount(
                         //             double.parse(totalQuantity.toString()),
@@ -232,9 +231,10 @@ class _BuySell extends State<BuySell> {
                             style: TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold)),
                         onPressed: () {
-                          Navigator.of(context, rootNavigator: true)
-                              .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => NavPage()));
+                          sellStock();
+                          // Navigator.of(context, rootNavigator: true)
+                          //     .pushReplacement(MaterialPageRoute(
+                          //         builder: (context) => NavPage()));
                         }))
               ])))
         ]));

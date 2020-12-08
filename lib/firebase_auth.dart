@@ -4,6 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 import 'buySell.dart';
+import 'Profile.dart';
 
 // these variables will store FirebaseUser info
 String name;
@@ -207,7 +208,7 @@ Future<String> update() async {
   return 'update succeeded';
 }
 
-Future<String> updateProfile() async {
+Future<void> updateProfile() async {
   final ref = firebaseDB.reference().child("users");
   final FirebaseUser currentUser = await _auth.currentUser();
   ref.orderByChild("uid").equalTo(currentUser.uid);
@@ -215,9 +216,8 @@ Future<String> updateProfile() async {
       await ref.orderByChild("uid").equalTo(currentUser.uid).once();
 
   if (snapshot.value != null) {
-    ref.child(currentUser.uid).child("photo").set({imageUrl});
+    ref.child(currentUser.uid).child("photo").set({});
   }
-  return 'update succeeded';
 }
 
 String accountBalance;
@@ -239,7 +239,6 @@ Future<String> balanceSetup() async {
 }
 
 double totalPrice;
-double stockPrice = 0.0;
 
 Future<void> buyStock() async {
   final FirebaseUser currentUser = await _auth.currentUser();
@@ -278,7 +277,7 @@ Future<void> buyStock() async {
         double.parse(
             totalAmount(double.parse(totalQuantity.toString()), prices));
 
-    if (track != null && compare >= 0.0) {
+    if (track != null && totalQuantity >= 0) {
       ref.child(currentUser.uid).child("Stocks").child("Price").set(prices);
 
       ref
@@ -298,4 +297,48 @@ Future<void> buyStock() async {
                   totalAmount(double.parse(totalQuantity.toString()), prices)));
     }
   }
+  accountBalance = (double.parse(accountBalance) -
+          double.parse(
+              totalAmount(double.parse(totalQuantity.toString()), prices)))
+      .toString();
+}
+
+Future<void> sellStock() async {
+  final FirebaseUser currentUser = await _auth.currentUser();
+
+  final ref = firebaseDB.reference().child("users");
+
+  ref.orderByChild("uid").equalTo(currUID);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+  if (snapshot.value != null && totalQuantity >= totalQuantity) {
+    // ref
+    //     .child(currentUser.uid)
+    //     .child("Stocks")
+    //     .child("Stock Name")
+    //     .set(stockName);
+
+    final track = ref.child(currentUser.uid).child("Stocks");
+
+    ref.child(currentUser.uid).child("Stocks").child("Price").set(prices);
+
+    ref
+        .child(currentUser.uid)
+        .child("Stocks")
+        .child("Quantity")
+        .set(totalQuantity - totalQuantity);
+    ref
+        .child(currentUser.uid)
+        .child("Stocks")
+        .child("totalPrice")
+        .set(totalAmount(double.parse(totalQuantity.toString()), prices));
+    ref2.child(currentUser.uid).child("balance").set(
+        double.parse(accountBalance) +
+            double.parse(
+                totalAmount(double.parse(totalQuantity.toString()), prices)));
+  }
+  accountBalance = (double.parse(accountBalance) +
+          double.parse(
+              totalAmount(double.parse(totalQuantity.toString()), prices)))
+      .toString();
 }
