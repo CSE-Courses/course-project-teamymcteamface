@@ -1,7 +1,9 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'NavPage.dart';
+import 'firebase_auth.dart';
 
 // void main() => runApp(MyStatefulWidget());
 final amountController = TextEditingController();
@@ -34,12 +36,33 @@ void initState() {
 class _BuySell extends State<BuySell> {
   @override
   Widget build(BuildContext context) {
+    var balance = 0.0;
+    final DatabaseReference dbRef = FirebaseDatabase.instance.reference().child("users/$currUID");
+
     return Scaffold(
         appBar: AppBar(
           title: Text('Number Field increment decrement'),
         ),
         body: Column(children: <Widget>[
           Column(children: <Widget>[
+            FutureBuilder(
+                future: dbRef.once(),
+                builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+                  if (snapshot.hasData) {
+                    Map<dynamic, dynamic> values = snapshot.data.value;
+                    return Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text("Name: " + values["name"]),
+                          Text("Balance: \$" + values["balance"].toString()),
+                        ],
+                      ),
+                    );
+                  }
+                  return CircularProgressIndicator();
+                }
+            ),
             SizedBox(height: 50),
             Text("${widget.stockPrice}"),
             Padding(

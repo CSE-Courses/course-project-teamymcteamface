@@ -74,135 +74,49 @@ void signOutGoogle() async {
   print("User Sign Out");
 }
 
-final ref = firebaseDB.reference().child("users");
-
 Future<void> signUpWithEmail(String formName, String formEmail,
     String formPassword, BuildContext context) async {
-  try {
-    _auth.createUserWithEmailAndPassword(
-        email: formEmail, password: formPassword);
-  } catch (e) {
-    // Display alert if signup fails for some reason.
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: Text("Error"),
-            content: SingleChildScrollView(
-              child: ListBody(
-                children: <Widget>[
-                  Text(e.code),
-                  Text(e.message),
-                ],
-              ),
-            ),
-            actions: <Widget>[
-              FlatButton(
-                child: Text('Ok'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          );
-        });
-  }
-  final FirebaseUser currentUser = await _auth.currentUser();
-  UserUpdateInfo userUpdateInfo = UserUpdateInfo();
-  userUpdateInfo.displayName = formName;
 
-  currentUser.reload();
-  print(currentUser.displayName);
+  final AuthResult authResult = await _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword);
+  final FirebaseUser user = authResult.user;
 
-  //name = formName;
-  name = currentUser.displayName;
-  email = currentUser.email;
-  currUID = currentUser.uid;
+  name = formName;
+  //name = currentUser.displayName;
+  //UserUpdateInfo userUpdateInfo = UserUpdateInfo();
+  //userUpdateInfo.displayName = formName;
+  email = user.email;
+  currUID = user.uid;
   imageUrl = "";
+
+  assert(await user.getIdToken() != null);
 
   // create firebase db reference to access entries
   final ref = firebaseDB.reference().child("users");
-
   // check if user exists; if not create new entry in db
-  ref.orderByChild("uid").equalTo(currentUser.uid);
+  ref.orderByChild("uid").equalTo(user.uid);
   DataSnapshot snapshot =
-      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+    await ref.orderByChild("uid").equalTo(user.uid).once();
   if (snapshot.value == null) {
     print("adding new user");
-    ref.push().set({
+    ref.child(currUID).set({
       // add to database
       "name": name,
       "uid": currUID,
       "email": email,
-      "photo": imageUrl,
+      "photo": imageUrl
     });
   }
 }
 
-Future<void> signUpWithEmail2(String formName, String formEmail,
-    String formPassword, BuildContext context) async {
-  print(formName);
-  print(formEmail);
-  print(formPassword);
-  print('123');
-
-  int succeed = 0;
-  FirebaseUser currentUser;
-
-  _auth
-      .createUserWithEmailAndPassword(email: formEmail, password: formPassword)
-      .then((credential) {
-    currentUser = credential.user;
-    UserUpdateInfo userUpdateInfo = UserUpdateInfo();
-    userUpdateInfo.displayName = formName;
-
-    currentUser.reload();
-    //print(currentUser.displayName);
-
-    name = formName;
-    //name = currentUser.displayName;
-    email = currentUser.email;
-    currUID = currentUser.uid;
-    imageUrl = "";
-
-    succeed = 1;
-  }).catchError((error) {
-    print(error);
-  });
-
-  // Didn't put this in then() because await keyword doesn't work in then().
-  if (succeed == 1) {
-    // create firebase db reference to access entries
-
-    // check if user exists; if not create new entry in db
-    ref.orderByChild("email").equalTo(currentUser.uid);
-    DataSnapshot snapshot =
-        await ref.orderByChild("email").equalTo(currentUser.uid).once();
-    if (snapshot.value == null) {
-      print("adding new user");
-      ref.push().set({
-        // add to database
-        "name": name,
-        "uid": currUID,
-        "email": email,
-        "photo": imageUrl
-      });
-    }
-  }
-}
-
 Future<void> signInWithEmail(String formEmail, String formPassword) async {
-  _auth
-      .signInWithEmailAndPassword(email: formEmail, password: formPassword)
-      .then((credential) {
-    final FirebaseUser currentUser = credential.user;
-    email = currentUser.email;
-    currUID = currentUser.uid;
-    return;
-  }).catchError((error) {
-    print(error);
-    return;
-  });
+  final AuthResult authResult = await _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword);
+  final FirebaseUser user = authResult.user;
+
+  assert(await user.getIdToken() != null);
+
+  email = user.email;
+  currUID = user.uid;
+
   return;
 }
 
@@ -259,6 +173,7 @@ TextEditingController nameChange = TextEditingController();
 TextEditingController bioChange = TextEditingController();
 
 Future<String> update() async {
+  final ref = firebaseDB.reference().child("users");
   final FirebaseUser currentUser = await _auth.currentUser();
 
   ref.orderByChild("uid").equalTo(currentUser.uid);
@@ -272,6 +187,7 @@ Future<String> update() async {
 }
 
 Future<String> updateProfile() async {
+  final ref = firebaseDB.reference().child("users");
   final FirebaseUser currentUser = await _auth.currentUser();
   ref.orderByChild("uid").equalTo(currentUser.uid);
   DataSnapshot snapshot =
