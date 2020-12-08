@@ -70,6 +70,7 @@ Future<String> signInWithGoogle() async {
       "uid": currUID,
       "email": email,
       "photo": imageUrl,
+      "spent": 0
       "bio": bioChange.text,
       "balance": pickBalance.text,
       "status": status
@@ -120,6 +121,7 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "uid": currUID,
       "email": email,
       "photo": imageUrl,
+      "spent": 0
       "bio": bioChange.text,
       "balance": pickBalance.text,
       "status": "0"
