@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'NavPage.dart';
+import 'balance.dart';
 import 'firebase_auth.dart';
 
 void main() => runApp(MyHomePage());
@@ -103,6 +104,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     settings: RouteSettings(name: "/NavPage"),
+                    builder: (context) {
+                      return NavPage();
+                    },
+                  ),
+                );
+                pickBalance.text == ""
+                    ? Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Balance();
+                    },
+                  ),
+                )
+                    : Navigator.of(context).push(
+                  MaterialPageRoute(
                     builder: (context) {
                       return NavPage();
                     },
