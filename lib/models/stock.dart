@@ -1,27 +1,78 @@
+// To parse this JSON data, do
+//
+//     final stockTicker = stockTickerFromJson(jsonString);
 
-class Stock{
-  final String symbol;
-  final String company;
-  final double price;
+import 'dart:convert';
 
-  Stock({this.symbol, this.company, this.price});
+List<StockTicker> stockTickerFromJson(String str) => List<StockTicker>.from(
+    json.decode(str).map((x) => StockTicker.fromJson(x)));
 
-  static List<Stock> getAll(){
-    List<Stock> stocks = List<Stock>();
-    stocks.add(Stock(company: "Apple Computers", symbol: "APPLE", price: 258));
-    stocks.add(Stock(company: "Alphabet", symbol: "ALPH", price: 800));
-    stocks
-        .add(Stock(company: "General Electronic", symbol: "GE", price: 56.00));
-    stocks.add(Stock(company: "Home Depot", symbol: "HE", price: 178));
-    stocks.add(Stock(company: "Evergreen Solar", symbol: "EVR", price: 9.0));
-    stocks.add(Stock(company: "Facebook", symbol: "FB", price: 200));
-    stocks.add(Stock(company: "Samsung", symbol: "SAM", price: 134));
-    stocks.add(Stock(company: "Snapchat", symbol: "SNAP", price: 45));
-    stocks.add(Stock(company: "Microsoft", symbol: "MSOFT", price: 400));
-    stocks.add(Stock(company: "Google", symbol: "GOOG", price: 1800));
+String stockTickerToJson(List<StockTicker> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-    return stocks;
+class StockTicker {
+  StockTicker({
+    this.currency,
+    this.description,
+    this.displaySymbol,
+    this.symbol,
+    this.type,
+  });
 
+  Currency currency;
+  String description;
+  String displaySymbol;
+  String symbol;
+  Type type;
+
+  factory StockTicker.fromJson(Map<String, dynamic> json) => StockTicker(
+        currency: currencyValues.map[json["currency"]],
+        description: json["description"],
+        displaySymbol: json["displaySymbol"],
+        symbol: json["symbol"],
+        type: typeValues.map[json["type"]],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "currency": currencyValues.reverse[currency],
+        "description": description,
+        "displaySymbol": displaySymbol,
+        "symbol": symbol,
+        "type": typeValues.reverse[type],
+      };
 }
 
+enum Currency { USD, EMPTY }
+
+final currencyValues = EnumValues({"": Currency.EMPTY, "USD": Currency.USD});
+
+enum Type { EQS, EMPTY, ETF, DR, UNT, STP, WAR, PRF, BND, TRT, SP, PFS }
+
+final typeValues = EnumValues({
+  "BND": Type.BND,
+  "DR": Type.DR,
+  "": Type.EMPTY,
+  "EQS": Type.EQS,
+  "ETF": Type.ETF,
+  "PFS": Type.PFS,
+  "PRF": Type.PRF,
+  "SP": Type.SP,
+  "STP": Type.STP,
+  "TRT": Type.TRT,
+  "UNT": Type.UNT,
+  "WAR": Type.WAR
+});
+
+class EnumValues<T> {
+  Map<String, T> map;
+  Map<T, String> reverseMap;
+
+  EnumValues(this.map);
+
+  Map<T, String> get reverse {
+    if (reverseMap == null) {
+      reverseMap = map.map((k, v) => new MapEntry(v, k));
+    }
+    return reverseMap;
+  }
 }

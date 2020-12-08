@@ -1,7 +1,14 @@
-import 'package:StockMarketApp/stock_list.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'firebase_auth.dart';
+import 'stock_list.dart';
+import 'package:provider/provider.dart';
+import 'stock_ticker.dart';
+import 'dart:convert';
+import 'dart:async';
+import 'package:http/http.dart' as http;
 
 import 'models/stock.dart';
 
@@ -11,48 +18,50 @@ void main() {
 
 class StockPage extends StatelessWidget {
   // This widget is the root of your application.
-   @override
+  @override
   Widget build(BuildContext context) {
-   return MaterialApp(
+    return MaterialApp(
         theme: ThemeData(
           brightness: Brightness.light,
-          primaryColor: Colors.black, //Changing this will change the color of the TabBar
+          primaryColor:
+              Colors.black, //Changing this will change the color of the TabBar
         ),
         home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-    appBar: PreferredSize(
-    preferredSize: Size.fromHeight(50.0),
-        child: AppBar(
-        bottom: TabBar(
-        tabs: [
-              Tab(text: "Home"),
-              Tab(text: "Following"),
-            ],
+          length: 2,
+          child: Scaffold(
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(50.0),
+              child: AppBar(
+                bottom: TabBar(
+                  tabs: [
+                    Tab(text: "Home"),
+                    Tab(text: "Following"),
+                  ],
+                ),
+              ),
+            ),
+            body: TabBarView(
+              children: [
+                new HomePage(),
+                Text("//TO DO"),
+              ],
+            ),
           ),
-        ),
-    ),
-        body: TabBarView(
-          children: [
-            new HomePage(),
-           Text("//TO DO"),
-          ],
-        ),
-      ),
-    ));
+        ));
   }
- }
+}
 //     return MaterialApp(title: "Stocks", home: HomePage());
 //   }
 // }
 
 class HomePage extends StatelessWidget {
-
   final date = DateTime.parse(DateTime.now().toString());
-
 
   @override
   Widget build(BuildContext context) {
+    var balance = 0.0;
+    final DatabaseReference dbRef = FirebaseDatabase.instance.reference().child("users/$currUID");
+
     return Scaffold(
         body: Stack(children: <Widget>[
       Container(
@@ -63,6 +72,24 @@ class HomePage extends StatelessWidget {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    FutureBuilder(
+                        future: dbRef.once(),
+                        builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+                          if (snapshot.hasData) {
+                            Map<dynamic, dynamic> values = snapshot.data.value;
+                            return Card(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Name: " + values["name"]),
+                                  Text("Balance: \$" + values["balance"].toString()),
+                                ],
+                              ),
+                            );
+                          }
+                          return CircularProgressIndicator();
+                        }
+                    ),
                 Text("Stocks",
                     style: TextStyle(
                         color: Colors.white,
@@ -75,27 +102,27 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold)),
                 Padding(
                   padding: const EdgeInsets.only(top: 8),
-                  child: SizedBox(
-                    height: 50,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintStyle: TextStyle(color: Colors.grey[500]),
-                          hintText: "Search",
-                          prefix: Icon(Icons.search),
-                          fillColor: Colors.white,
-                          filled: true,
-                          border: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 0, style: BorderStyle.none),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(16)))),
-                    ),
-                  ),
+                  //old search bar
+                  // child: SizedBox(
+                  //   height: 50,
+                  //   child: TextField(
+                  //     decoration: InputDecoration(
+                  //         hintStyle: TextStyle(color: Colors.grey[500]),
+                  //         hintText: "Search",
+                  //         prefix: Icon(Icons.search),
+                  //         fillColor: Colors.white,
+                  //         filled: true,
+                  //         border: OutlineInputBorder(
+                  //             borderSide:
+                  //             BorderSide(width: 0, style: BorderStyle.none),
+                  //             borderRadius:
+                  //             BorderRadius.all(Radius.circular(16)))),
+                  //   ),
+                  // ),
                 ),
-                    SizedBox(
-                        height: MediaQuery.of(context).size.height - 270,
-                        child: StockList(stocks: Stock.getAll())
-                    )
+                SizedBox(
+                    height: MediaQuery.of(context).size.height,
+                    child: StockList())
               ])))
     ]));
   }
