@@ -168,7 +168,22 @@ class _BuySell extends State<BuySell> {
                     height: 70.0,
                     child: RaisedButton(
                       // shape: StadiumBorder(),
-                      onPressed: () {},
+                      onPressed: () {
+                        total = 20;
+                        // Update spent and balance fields in database
+                        var newBalance = 0;
+                        var newSpent = 0;
+                        dbRef.once().then((DataSnapshot snapshot) {
+                          Map<dynamic, dynamic> values = snapshot.value;
+                          newBalance = values["balance"] - total;
+                          newSpent = values["spent"] + total;
+                          dbRef.update({
+                            "balance": newBalance,
+                            "spent": newSpent
+                          });
+                          setState(() {});
+                        });
+                      },
                       child: Text("BUY"),
                     )),
                 SizedBox(

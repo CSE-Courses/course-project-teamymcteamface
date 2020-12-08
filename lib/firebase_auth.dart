@@ -62,6 +62,8 @@ Future<String> signInWithGoogle() async {
       "uid": currUID,
       "email": email,
       "photo": imageUrl,
+      "balance": 0,
+      "spent": 0
     });
   }
 
@@ -103,7 +105,9 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "name": name,
       "uid": currUID,
       "email": email,
-      "photo": imageUrl
+      "photo": imageUrl,
+      "balance": 0,
+      "spent": 0
     });
   }
 }
