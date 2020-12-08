@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text("Name: " + values["name"]),
-                                  Text("Balance: \$" + values["balance"]),
+                                  Text("Balance: \$" + values["balance"].toString()),
                                 ],
                               ),
                             );

@@ -54,7 +54,7 @@ class _BuySell extends State<MyStatefulWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text("Name: " + values["name"]),
-                          Text("Balance: \$" + values["balance"]),
+                          Text("Balance: \$" + values["balance"].toString()),
                         ],
                       ),
                     );
