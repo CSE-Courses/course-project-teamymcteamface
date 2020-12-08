@@ -68,7 +68,7 @@ Future<String> signInWithGoogle() async {
       "photo": imageUrl,
       "spent": 0,
       "bio": bioChange.text,
-      "balance": pickBalance.text,
+      "balance": 0,
       "status": status
     });
   }
@@ -119,7 +119,7 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "photo": imageUrl,
       "spent": 0,
       "bio": bioChange.text,
-      "balance": pickBalance.text,
+      "balance": 0,
       "status": status
     });
   }
@@ -223,15 +223,16 @@ Future<void> updateProfile() async {
 String accountBalance;
 final ref2 = firebaseDB.reference().child("users");
 
-Future<String> balanceSetup() async {
+Future<String> balanceSetup(double balance) async {
   final FirebaseUser currentUser = await _auth.currentUser();
   ref2.orderByChild("uid").equalTo(currUID);
   DataSnapshot snapshot =
       await ref2.orderByChild("uid").equalTo(currentUser.uid).once();
 
+  print(balance);
   if (snapshot.value != null) {
     accountBalance = pickBalance.text;
-    ref2.child(currentUser.uid).child("balance").set(accountBalance);
+    ref2.child(currentUser.uid).child("balance").set(balance);
     status = "1";
     ref2.child(currUID).child("status").set(status);
   }

@@ -80,7 +80,7 @@ class _BalanceSell extends State<MyStatefulWidget> {
                     color: Colors.redAccent,
                     child: Text('SAVE'),
                     onPressed: () {
-                      balanceSetup();
+                      balanceSetup(double.parse(pickBalance.text));
 
                       Navigator.of(context).push(
                         MaterialPageRoute(
