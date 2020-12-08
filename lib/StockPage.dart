@@ -1,6 +1,8 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'firebase_auth.dart';
 import 'stock_list.dart';
 import 'package:provider/provider.dart';
 import 'stock_ticker.dart';
@@ -57,6 +59,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var balance = 0.0;
+    final DatabaseReference dbRef = FirebaseDatabase.instance.reference().child("users/$currUID");
+
     return Scaffold(
         body: Stack(children: <Widget>[
       Container(
@@ -67,6 +72,24 @@ class HomePage extends StatelessWidget {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    FutureBuilder(
+                        future: dbRef.once(),
+                        builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
+                          if (snapshot.hasData) {
+                            Map<dynamic, dynamic> values = snapshot.data.value;
+                            return Card(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Name: " + values["name"]),
+                                  Text("Balance: \$" + values["balance"]),
+                                ],
+                              ),
+                            );
+                          }
+                          return CircularProgressIndicator();
+                        }
+                    ),
                 Text("Stocks",
                     style: TextStyle(
                         color: Colors.white,
