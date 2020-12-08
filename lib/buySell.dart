@@ -7,7 +7,9 @@ import 'firebase_auth.dart';
 
 // void main() => runApp(MyStatefulWidget());
 final amountController = TextEditingController();
-int total = 0;
+int totalQuantity = 1;
+String prices = "";
+String stockName = "";
 
 // class BuySell extends StatelessWidget {
 //   @override
@@ -17,9 +19,12 @@ int total = 0;
 //     );
 //   }
 // }
+String totalAmount(double two, String three) {
+  return (double.parse(three) * two).toString();
+}
 
 class BuySell extends StatefulWidget {
-   final double stockPrice;
+  final double stockPrice;
   BuySell({this.stockPrice});
 
   @override
@@ -27,44 +32,53 @@ class BuySell extends StatefulWidget {
 }
 
 TextEditingController augment = TextEditingController();
+TextEditingController augmentTotal = TextEditingController();
+
 @override
 void initState() {
   initState();
-  augment.text = "0"; // Setting the initial value for the field.
+  augment.text = '0'; // Setting the initial value for the field.
 }
 
 class _BuySell extends State<BuySell> {
   @override
   Widget build(BuildContext context) {
-    var balance = 0.0;
-    final DatabaseReference dbRef = FirebaseDatabase.instance.reference().child("users/$currUID");
+    final DatabaseReference dbRef =
+        FirebaseDatabase.instance.reference().child("users/$currUID");
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Number Field increment decrement'),
-        ),
+        resizeToAvoidBottomPadding: false,
         body: Column(children: <Widget>[
           Column(children: <Widget>[
+            SizedBox(
+              height: 60,
+            ),
             FutureBuilder(
                 future: dbRef.once(),
                 builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
                   if (snapshot.hasData) {
                     Map<dynamic, dynamic> values = snapshot.data.value;
+
                     return Card(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text("Name: " + values["name"]),
-                          Text("Balance: \$" + values["balance"].toString()),
+                          Text("Name: " + values["name"],
+                              style: TextStyle(
+                                  fontSize: 29, fontWeight: FontWeight.bold)),
+                          Text("Balance: \$" + values["balance"].toString(),
+                              style: TextStyle(
+                                  fontSize: 29, fontWeight: FontWeight.bold)),
                         ],
                       ),
                     );
                   }
+                  prices = "${widget.stockPrice}";
                   return CircularProgressIndicator();
-                }
-            ),
+                }),
             SizedBox(height: 50),
-            Text("${widget.stockPrice}"),
+            Text("${widget.stockPrice}",
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Center(
@@ -119,9 +133,13 @@ class _BuySell extends State<BuySell> {
                                   size: 18.0,
                                 ),
                                 onTap: () {
+                                  // augment.text = "1";
                                   int currentValue = int.parse(augment.text);
+                                  // totalAmount();
                                   setState(() {
                                     currentValue++;
+                                    totalQuantity = currentValue;
+
                                     augment.text = (currentValue)
                                         .toString(); // incrementing value
                                   });
@@ -135,11 +153,10 @@ class _BuySell extends State<BuySell> {
                               ),
                               onTap: () {
                                 int currentValue = int.parse(augment.text);
-                                total = int.parse(amountController.text) +
-                                    int.parse(augment.text);
-
+                                // totalAmount();
                                 setState(() {
                                   currentValue--;
+                                  totalQuantity = currentValue;
                                   augment.text =
                                       (currentValue > 0 ? currentValue : 0)
                                           .toString(); // decrementing value
@@ -157,7 +174,11 @@ class _BuySell extends State<BuySell> {
           ]),
           Container(
               child: Center(
-            child: Text("Total Amount is: " + "$total"),
+            child: Text(
+                "Total Amount is: " +
+                    totalAmount(double.parse(totalQuantity.toString()),
+                        "${widget.stockPrice}"),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
           )),
           Container(
               height: 38.0,
@@ -182,8 +203,17 @@ class _BuySell extends State<BuySell> {
                           });
                           setState(() {});
                         });
+                        // pickBalance.text = (double.parse(pickBalance.text) -
+                        //         double.parse(totalAmount(
+                        //             double.parse(totalQuantity.toString()),
+                        //             "${widget.stockPrice}")))
+                        //     .toString();
+
+                        buyStock();
                       },
-                      child: Text("BUY"),
+                      child: Text("BUY",
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold)),
                     )),
                 SizedBox(
                   width: 5,
@@ -194,7 +224,9 @@ class _BuySell extends State<BuySell> {
                     child: RaisedButton(
                         textColor: Colors.white,
                         color: Colors.redAccent,
-                        child: Text('SELL'),
+                        child: Text('SELL',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold)),
                         onPressed: () {
                           Navigator.of(context, rootNavigator: true)
                               .pushReplacement(MaterialPageRoute(

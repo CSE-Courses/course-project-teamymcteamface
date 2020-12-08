@@ -1,8 +1,9 @@
+import 'package:StockMarketApp/balance.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'NavPage.dart';
 import 'firebase_auth.dart';
-
+import 'firebase_auth.dart';
 
 void main() => runApp(GLoginPage());
 
@@ -17,9 +18,8 @@ class GLoginPage extends StatelessWidget {
         initialRoute: '/login',
         routes: {
           '/login': (context) => _LoginPageState(),
-          '/passReset':(context) => ResetPasswordWidget(),
-        }
-    );
+          '/passReset': (context) => ResetPasswordWidget(),
+        });
   }
 }
 
@@ -82,8 +82,7 @@ class LoginPageState extends State<_LoginPageState> {
                 style: style,
                 decoration: InputDecoration(
                   hintText: 'Email',
-                  contentPadding:
-                  EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                  contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(32.0)),
                 ),
@@ -107,8 +106,7 @@ class LoginPageState extends State<_LoginPageState> {
                 style: style,
                 decoration: InputDecoration(
                   hintText: 'Password',
-                  contentPadding:
-                  EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                  contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(32.0)),
                 ),
@@ -137,9 +135,10 @@ class LoginPageState extends State<_LoginPageState> {
                           //_loginKey.currentState.save();
                           String email = emailCtrl.text.trim();
                           String pass = passCtrl.text.trim();
-                          signInWithEmail(email, pass).then((value){
+                          signInWithEmail(email, pass).then((value) {
                             print(currUID);
-                            if(currUID != null) { // Temporary hacky way to check if auth is valid
+                            if (currUID != null) {
+                              // Temporary hacky way to check if auth is valid
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   settings: RouteSettings(name: "/NavPage"),
@@ -183,8 +182,7 @@ class LoginPageState extends State<_LoginPageState> {
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 
   Widget _signInButton() {
@@ -192,13 +190,22 @@ class LoginPageState extends State<_LoginPageState> {
       splashColor: Colors.grey,
       onPressed: () {
         signInWithGoogle().whenComplete(() {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) {
-                return NavPage();
-              },
-            ),
-          );
+          // ignore: unrelated_type_equality_checks
+          pickBalance.text != ""
+              ? Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return NavPage();
+                    },
+                  ),
+                )
+              : Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Balance();
+                    },
+                  ),
+                );
         });
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
@@ -228,7 +235,6 @@ class LoginPageState extends State<_LoginPageState> {
   }
 }
 
-
 class ResetPasswordWidget extends StatefulWidget {
   ResetPasswordWidget({Key key}) : super(key: key);
 
@@ -238,8 +244,8 @@ class ResetPasswordWidget extends StatefulWidget {
 
 class ResetPassword extends State<ResetPasswordWidget> {
   final pwResetFormKey = GlobalKey<FormState>();
-  TextStyle style = TextStyle(
-      fontFamily: 'Montserrat', fontSize: 20.0, color: Colors.black);
+  TextStyle style =
+      TextStyle(fontFamily: 'Montserrat', fontSize: 20.0, color: Colors.black);
 
   final emailCtrl = TextEditingController();
 
@@ -249,75 +255,76 @@ class ResetPassword extends State<ResetPasswordWidget> {
         resizeToAvoidBottomInset: false,
         body: Center(
             child: Form(
-              key: pwResetFormKey,
-              child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
-                      child: TextFormField(
-                        controller:emailCtrl,
-                        validator: (value) {
-                          if (value.trim().isEmpty) {
-                            return 'Please enter your email';
-                          }
-                          return null;
-                        },
-                        style: style,
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                            hintText: "Email",
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-                      child: Material(
-                        elevation: 5.0,
-                        borderRadius: BorderRadius.circular(32.0),
-                        color: Color(0xff01A0C7),
-                        child: MaterialButton(
-                          onPressed: () {
-                            if (pwResetFormKey.currentState.validate()) {
-                              // Request password change. Reauthentication is done in requestChangePassword().
-                              FirebaseAuth _auth = getAuth();
-                              _auth.sendPasswordResetEmail(email: emailCtrl.text.trim()).then((value) {
-                                //Navigator.pop(context);
-                              }).catchError((error) {
-                                print(error);
-                              });
-                            }
-                          },
-                          minWidth: MediaQuery.of(context).size.width,
-                          padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-                          child: Text("Submit",
-                              textAlign: TextAlign.center,
-                              style: style.copyWith(color: Colors.white, fontSize: 12.0)),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 0.0),
-                      child: Material(
-                        elevation: 5.0,
-                        borderRadius: BorderRadius.circular(32.0),
-                        color: Color(0xff01A0C7),
-                        child: MaterialButton(
-                          minWidth: MediaQuery.of(context).size.width,
-                          padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text("Cancel",
-                              textAlign: TextAlign.center,
-                              style: style.copyWith(color: Colors.white, fontSize: 12.0)),
-                        ),
-                      ),
-                    ),
-                  ]
+          key: pwResetFormKey,
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
+              child: TextFormField(
+                controller: emailCtrl,
+                validator: (value) {
+                  if (value.trim().isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  return null;
+                },
+                style: style,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                    hintText: "Email",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(32.0))),
               ),
-            )
-        )
-    );
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(32.0),
+                color: Color(0xff01A0C7),
+                child: MaterialButton(
+                  onPressed: () {
+                    if (pwResetFormKey.currentState.validate()) {
+                      // Request password change. Reauthentication is done in requestChangePassword().
+                      FirebaseAuth _auth = getAuth();
+                      _auth
+                          .sendPasswordResetEmail(email: emailCtrl.text.trim())
+                          .then((value) {
+                        //Navigator.pop(context);
+                      }).catchError((error) {
+                        print(error);
+                      });
+                    }
+                  },
+                  minWidth: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                  child: Text("Submit",
+                      textAlign: TextAlign.center,
+                      style:
+                          style.copyWith(color: Colors.white, fontSize: 12.0)),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 0.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(32.0),
+                color: Color(0xff01A0C7),
+                child: MaterialButton(
+                  minWidth: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("Cancel",
+                      textAlign: TextAlign.center,
+                      style:
+                          style.copyWith(color: Colors.white, fontSize: 12.0)),
+                ),
+              ),
+            ),
+          ]),
+        )));
   }
 
   @override
