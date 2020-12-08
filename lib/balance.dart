@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'firebase_auth.dart';
 
 TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-String chooseBalance;
+double chooseBalance;
 
 // TextEditingController nameChange = TextEditingController();
 // TextEditingController bioChange = TextEditingController();
@@ -58,7 +58,7 @@ class _BalanceSell extends State<MyStatefulWidget> {
                       return null;
                     },
                     onSaved: (String value) {
-                      chooseBalance = value.trim();
+                      chooseBalance = double.parse(value.trim());
                     }),
 
                 // Slider(
