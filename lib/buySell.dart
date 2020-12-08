@@ -169,7 +169,6 @@ class _BuySell extends State<BuySell> {
                     child: RaisedButton(
                       // shape: StadiumBorder(),
                       onPressed: () {
-                        total = 20;
                         // Update spent and balance fields in database
                         var newBalance = 0;
                         var newSpent = 0;
