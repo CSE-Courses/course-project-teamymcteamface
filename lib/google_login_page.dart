@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'NavPage.dart';
 import 'firebase_auth.dart';
+import 'firebase_auth.dart';
 
 void main() => runApp(GLoginPage());
 
@@ -190,7 +191,7 @@ class LoginPageState extends State<_LoginPageState> {
       onPressed: () {
         signInWithGoogle().whenComplete(() {
           // ignore: unrelated_type_equality_checks
-          status == "1"
+          pickBalance.text != ""
               ? Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {

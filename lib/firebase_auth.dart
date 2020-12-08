@@ -2,7 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'profileUpdate.dart';
+
+import 'buySell.dart';
+import 'buySell.dart';
+import 'buySell.dart';
+import 'buySell.dart';
+import 'buySell.dart';
+import 'buySell.dart';
+import 'buySell.dart';
 
 // these variables will store FirebaseUser info
 String name;
@@ -14,7 +21,6 @@ String password;
 String bio;
 String status = "0";
 
-final ref = firebaseDB.reference().child("users");
 final firebaseDB = FirebaseDatabase.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -229,4 +235,57 @@ Future<String> balanceSetup() async {
     status = "1";
   }
   return 'update succeeded';
+}
+
+double totalPrice;
+double stockPrice = 0.0;
+
+Future<void> buyStock() async {
+  final FirebaseUser currentUser = await _auth.currentUser();
+
+  final ref = firebaseDB.reference().child("users");
+
+  ref.orderByChild("uid").equalTo(currUID);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value != null) {
+    // ref
+    //     .child(currentUser.uid)
+    //     .child("Stocks")
+    //     .child("Stock Name")
+    //     .set(stockName);
+
+    final track = ref.child(currentUser.uid).child("Stocks");
+
+    ref.child(currentUser.uid).child("Stocks").child("Price").set(prices);
+
+    ref
+        .child(currentUser.uid)
+        .child("Stocks")
+        .child("Quantity")
+        .set(totalQuantity);
+    ref
+        .child(currentUser.uid)
+        .child("Stocks")
+        .child("totalPrice")
+        .set(totalAmount(double.parse(totalQuantity.toString()), prices));
+
+    // buyStock();
+
+    if (track != null) {
+      ref.child(currentUser.uid).child("Stocks").child("Price").set(prices);
+
+      ref
+          .child(currentUser.uid)
+          .child("Stocks")
+          .child("Quantity")
+          .set(totalQuantity);
+      ref
+          .child(currentUser.uid)
+          .child("Stocks")
+          .child("totalPrice")
+          .set(totalAmount(double.parse(totalQuantity.toString()), prices));
+    }
+  }
 }
