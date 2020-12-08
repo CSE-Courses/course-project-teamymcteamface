@@ -4,12 +4,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 import 'buySell.dart';
-import 'buySell.dart';
-import 'buySell.dart';
-import 'buySell.dart';
-import 'buySell.dart';
-import 'buySell.dart';
-import 'buySell.dart';
 
 // these variables will store FirebaseUser info
 String name;
@@ -54,6 +48,7 @@ Future<String> signInWithGoogle() async {
   email = user.email;
   imageUrl = user.photoUrl;
   currUID = currentUser.uid;
+  status = user.phoneNumber;
 
   // create firebase db reference to access entries
   final ref = firebaseDB.reference().child("users");
@@ -124,7 +119,7 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       "spent": 0,
       "bio": bioChange.text,
       "balance": pickBalance.text,
-      "status": "0"
+      "status": status
     });
   }
 }
@@ -194,6 +189,7 @@ String formBio;
 // TextEditingController nameChange = TextEditingController();
 TextEditingController bioChange = TextEditingController();
 TextEditingController pickBalance = TextEditingController();
+String profileBio;
 
 Future<String> update() async {
   final ref = firebaseDB.reference().child("users");
@@ -204,7 +200,8 @@ Future<String> update() async {
       await ref.orderByChild("uid").equalTo(currentUser.uid).once();
 
   if (snapshot.value != null) {
-    ref.child(currentUser.uid).child("bio").set(bioChange.text);
+    profileBio = bioChange.text;
+    ref.child(currentUser.uid).child("bio").set(profileBio);
   }
 
   return 'update succeeded';
@@ -223,18 +220,20 @@ Future<String> updateProfile() async {
   return 'update succeeded';
 }
 
-Future<String> balanceSetup() async {
-  final ref = firebaseDB.reference().child("users");
+String accountBalance;
+final ref2 = firebaseDB.reference().child("users");
 
+Future<String> balanceSetup() async {
   final FirebaseUser currentUser = await _auth.currentUser();
-  ref.orderByChild("uid").equalTo(currUID);
+  ref2.orderByChild("uid").equalTo(currUID);
   DataSnapshot snapshot =
-      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+      await ref2.orderByChild("uid").equalTo(currentUser.uid).once();
 
   if (snapshot.value != null) {
-    ref.child(currentUser.uid).child("balance").set(pickBalance.text);
-    ref.child(currUID).child("status").set("1");
+    accountBalance = pickBalance.text;
+    ref2.child(currentUser.uid).child("balance").set(accountBalance);
     status = "1";
+    ref2.child(currUID).child("status").set(status);
   }
   return 'update succeeded';
 }
@@ -275,7 +274,11 @@ Future<void> buyStock() async {
 
     // buyStock();
 
-    if (track != null) {
+    double compare = double.parse(accountBalance) -
+        double.parse(
+            totalAmount(double.parse(totalQuantity.toString()), prices));
+
+    if (track != null && compare >= 0.0) {
       ref.child(currentUser.uid).child("Stocks").child("Price").set(prices);
 
       ref
@@ -288,6 +291,11 @@ Future<void> buyStock() async {
           .child("Stocks")
           .child("totalPrice")
           .set(totalAmount(double.parse(totalQuantity.toString()), prices));
+
+      ref2.child(currentUser.uid).child("balance").set(
+          double.parse(accountBalance) -
+              double.parse(
+                  totalAmount(double.parse(totalQuantity.toString()), prices)));
     }
   }
 }

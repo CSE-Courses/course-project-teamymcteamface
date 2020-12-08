@@ -47,6 +47,8 @@ class LoginPageState extends State<_LoginPageState> {
     super.dispose();
   }
 
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -191,21 +193,23 @@ class LoginPageState extends State<_LoginPageState> {
       onPressed: () {
         signInWithGoogle().whenComplete(() {
           // ignore: unrelated_type_equality_checks
-          pickBalance.text != ""
+          pickBalance.text == ""
               ? Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return NavPage();
+                      return Balance();
                     },
                   ),
                 )
               : Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return Balance();
+                      return NavPage();
                     },
                   ),
                 );
+          count++;
+          print(count);
         });
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
