@@ -7,7 +7,7 @@ import 'firebase_auth.dart';
 
 // void main() => runApp(MyStatefulWidget());
 final amountController = TextEditingController();
-int total = 0;
+int total;
 
 // class BuySell extends StatelessWidget {
 //   @override
@@ -27,6 +27,8 @@ class BuySell extends StatefulWidget {
 }
 
 TextEditingController augment = TextEditingController();
+TextEditingController augmentTotal = TextEditingController();
+
 @override
 void initState() {
   initState();
@@ -40,9 +42,7 @@ class _BuySell extends State<BuySell> {
     final DatabaseReference dbRef = FirebaseDatabase.instance.reference().child("users/$currUID");
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Number Field increment decrement'),
-        ),
+        resizeToAvoidBottomPadding: false,
         body: Column(children: <Widget>[
           Column(children: <Widget>[
             FutureBuilder(
@@ -135,11 +135,12 @@ class _BuySell extends State<BuySell> {
                               ),
                               onTap: () {
                                 int currentValue = int.parse(augment.text);
-                                total = int.parse(amountController.text) +
-                                    int.parse(augment.text);
 
                                 setState(() {
                                   currentValue--;
+                                  // total = int.parse(amountController.text) *
+                                  //     int.parse(augment.text);
+                                  augmentTotal.text = total.toString();
                                   augment.text =
                                       (currentValue > 0 ? currentValue : 0)
                                           .toString(); // decrementing value
@@ -157,7 +158,7 @@ class _BuySell extends State<BuySell> {
           ]),
           Container(
               child: Center(
-            child: Text("Total Amount is: " + "$total"),
+            child: Text("Total Amount is: " + augmentTotal.text),
           )),
           Container(
               height: 38.0,

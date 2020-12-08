@@ -12,7 +12,9 @@ String currUID;
 String signInMethod;
 String password;
 String bio;
+String status = "0";
 
+final ref = firebaseDB.reference().child("users");
 final firebaseDB = FirebaseDatabase.instance;
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -56,12 +58,15 @@ Future<String> signInWithGoogle() async {
       await ref.orderByChild("uid").equalTo(currentUser.uid).once();
   if (snapshot.value == null) {
     print("adding new user");
-    ref.push().set({
+    ref.child(currUID).set({
       // add to database
       "name": name,
       "uid": currUID,
       "email": email,
       "photo": imageUrl,
+      "bio": bioChange.text,
+      "balance": pickBalance.text,
+      "status": status
     });
   }
 
@@ -70,14 +75,19 @@ Future<String> signInWithGoogle() async {
 }
 
 void signOutGoogle() async {
+  await _auth.signOut();
   await googleSignIn.signOut();
+  await googleSignIn.disconnect();
+
   print("User Sign Out");
 }
 
+// final ref = firebaseDB.reference().child("users");
+
 Future<void> signUpWithEmail(String formName, String formEmail,
     String formPassword, BuildContext context) async {
-
-  final AuthResult authResult = await _auth.createUserWithEmailAndPassword(email: formEmail, password: formPassword);
+  final AuthResult authResult = await _auth.createUserWithEmailAndPassword(
+      email: formEmail, password: formPassword);
   final FirebaseUser user = authResult.user;
 
   name = formName;
@@ -95,21 +105,25 @@ Future<void> signUpWithEmail(String formName, String formEmail,
   // check if user exists; if not create new entry in db
   ref.orderByChild("uid").equalTo(user.uid);
   DataSnapshot snapshot =
-    await ref.orderByChild("uid").equalTo(user.uid).once();
+      await ref.orderByChild("uid").equalTo(user.uid).once();
   if (snapshot.value == null) {
     print("adding new user");
-    ref.child(currUID).set({
+    ref.set({
       // add to database
       "name": name,
       "uid": currUID,
       "email": email,
-      "photo": imageUrl
+      "photo": imageUrl,
+      "bio": bioChange.text,
+      "balance": pickBalance.text,
+      "status": "0"
     });
   }
 }
 
 Future<void> signInWithEmail(String formEmail, String formPassword) async {
-  final AuthResult authResult = await _auth.signInWithEmailAndPassword(email: formEmail, password: formPassword);
+  final AuthResult authResult = await _auth.signInWithEmailAndPassword(
+      email: formEmail, password: formPassword);
   final FirebaseUser user = authResult.user;
 
   assert(await user.getIdToken() != null);
@@ -169,8 +183,9 @@ Future<int> requestChangePassword(String currPW, String newPW) async {
 String formName;
 String formBio;
 
-TextEditingController nameChange = TextEditingController();
+// TextEditingController nameChange = TextEditingController();
 TextEditingController bioChange = TextEditingController();
+TextEditingController pickBalance = TextEditingController();
 
 Future<String> update() async {
   final ref = firebaseDB.reference().child("users");
@@ -181,8 +196,9 @@ Future<String> update() async {
       await ref.orderByChild("uid").equalTo(currentUser.uid).once();
 
   if (snapshot.value != null) {
-    ref.update({"bio": bioChange.text, "Updated name": nameChange.text});
+    ref.child(currentUser.uid).child("bio").set(bioChange.text);
   }
+
   return 'update succeeded';
 }
 
@@ -194,7 +210,23 @@ Future<String> updateProfile() async {
       await ref.orderByChild("uid").equalTo(currentUser.uid).once();
 
   if (snapshot.value != null) {
-    ref.set({"photo": imageUrl});
+    ref.child(currentUser.uid).child("photo").set({imageUrl});
+  }
+  return 'update succeeded';
+}
+
+Future<String> balanceSetup() async {
+  final ref = firebaseDB.reference().child("users");
+
+  final FirebaseUser currentUser = await _auth.currentUser();
+  ref.orderByChild("uid").equalTo(currUID);
+  DataSnapshot snapshot =
+      await ref.orderByChild("uid").equalTo(currentUser.uid).once();
+
+  if (snapshot.value != null) {
+    ref.child(currentUser.uid).child("balance").set(pickBalance.text);
+    ref.child(currUID).child("status").set("1");
+    status = "1";
   }
   return 'update succeeded';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Profile.dart';
 import 'StockPage.dart';
+import 'balance.dart';
 import 'buySell.dart';
 
 void main() => runApp(NavPage());
@@ -41,6 +42,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
