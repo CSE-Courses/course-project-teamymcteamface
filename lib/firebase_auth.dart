@@ -110,7 +110,7 @@ Future<void> signUpWithEmail(String formName, String formEmail,
       await ref.orderByChild("uid").equalTo(user.uid).once();
   if (snapshot.value == null) {
     print("adding new user");
-    ref.set({
+    ref.child(currUID).set({
       // add to database
       "name": name,
       "uid": currUID,
