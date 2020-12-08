@@ -191,12 +191,16 @@ class _BuySell extends State<BuySell> {
                       // shape: StadiumBorder(),
                       onPressed: () {
                         // Update spent and balance fields in database
-                        var newBalance = 0;
-                        var newSpent = 0;
+                        double total = double.parse(totalAmount(double.parse(totalQuantity.toString()),
+                            "${widget.stockPrice}"));
+                        double newBalance = 0;
+                        double newSpent = 0;
                         dbRef.once().then((DataSnapshot snapshot) {
                           Map<dynamic, dynamic> values = snapshot.value;
                           newBalance = values["balance"] - total;
                           newSpent = values["spent"] + total;
+                          print(newBalance);
+                          print(newSpent);
                           dbRef.update({
                             "balance": newBalance,
                             "spent": newSpent
